@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="FloCraft - Surival Server ">
     <meta name="application-name" content="FloCraft">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
     </body>
     <link href="nav.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="/node_modules/swup/dist/swup.min.js"></script>
     <script defer src="/node_modules/@swup/scripts-plugin/dist/SwupScriptsPlugin.min.js"></script>
     <script defer src="script.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
-  
+    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js">
+    </script>
+
     <title>Home</title>
 </head>
+
 <body>
 
-    <div class="topbar"> <!-- Topbar -->
-        <div class="menubtn" onclick="doMenu()"> <!-- This is the button to open the sidenav -->
+    <div class="topbar">
+        <!-- Topbar -->
+        <div class="menubtn" onclick="doMenu()">
+            <!-- This is the button to open the sidenav -->
             <div class="bar1"></div>
             <div class="bar2"></div> <!-- These are the button bits so we can have nice animations -->
             <div class="bar3"></div>
         </div>
         <img src="/images/cursivelogo2.png" class="logo">
-       <!-- logo for topbar -->
+        <!-- logo for topbar -->
     </div>
-    <div id="swup"> <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
-        <div class="sidenav"> <!-- Links for side menu bar -->
+    <div id="swup">
+        <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
+        <div class="sidenav">
+            <!-- Links for side menu bar -->
             <div class="transition-current">
                 <a href="/index.html" onclick="navClose()">Home</a>
             </div>
@@ -59,6 +73,7 @@
         <script>
             /* Scripts that need to be present for any pages */
             var navIsOpen = 0
+
             function doMenu() {
                 if (navIsOpen == 0 || navIsOpen == '') {
                     navOpen();
@@ -66,32 +81,38 @@
                     navClose();
                 }
             }
+
             function navOpen() {
                 document.getElementsByClassName("sidenav")[0].classList.add("open");
                 document.getElementsByClassName("menubtn")[0].classList.add("open");
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
                 navIsOpen = 1;
             }
+
             function navClose() {
                 document.getElementsByClassName("sidenav")[0].classList.remove("open");
                 document.getElementsByClassName("menubtn")[0].classList.remove("open");
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
                 navIsOpen = 0;
             }
+
             function teamitemopen(n) {
                 document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
-                document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0]
+                    .innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
 
             }
+
             function teamitemclose() {
                 document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
-        <div class="clicktocloseoverlay" onclick="navClose()"> <!--overlay to close popup -->
+        <div class="clicktocloseoverlay" onclick="navClose()">
+            <!--overlay to close popup -->
         </div>
-<!--
+        <!--
 _______                               _____          _      
 |__   __|                             / ____|        | |     
 | | ___  _ __  _ __   __ ___   __ | |     ___   __| | ___ 
@@ -101,7 +122,8 @@ _______                               _____          _
         | |                                               
         |_|                this is for desktop users
 -->
-        <div class="topnav"> <!--Links for top menu bar-->
+        <div class="topnav">
+            <!--Links for top menu bar-->
             <a href="/"><img src="/images/cursivelogo2.png" class="logo"></a>
             <div class="toplinks">
                 <div>
@@ -127,32 +149,36 @@ _______                               _____          _
                 </div>
             </div>
         </div> <!-- end of the topmenu links -->
-<main>
-    <div class="transition-fade" style="margin-top: 50px;">
-        
-        <div id="logo-container"><img src="images/map4.png"/></div>
-        <div class="headercontent animate-bottom">
-            <img src="images/floheader.png"/>
-        </div>
-        <div class="serverinformation">
-            <h4>Play now at</h4>
-            <h1 style="text-shadow: 3px 4px 5px #000;">flocraft.online</h1>
-            <center><hr style="background-color: white;"></center>
-            <h5><span data-playercounter-ip="flocraft.online">0</span> players currently playing!</h5>
-        </div>
-       <div class="homebody">
-        <div class="jumbotron">
-            <h1 class="display-4">Welcome to FloCraft!</h1>
-            <p class="lead">FloCraft is a Surival Server with skills, land-claims, rankings, roles, special events, and much more!</p>
-            <hr style="background-color: black";>
-            <p>We have taken the time to provide all of the instructional content you need to play and succeed on FloCraft. Click below to see our guides!</p>
-            <p class="lead">
-              <a class="btn guidebutton btn-lg" href="/guides.html" role="button">Guides</a>
-            </p>
-          </div>
-       </div>
-    </div>
-</main>
+        <main>
+            <div class="transition-fade" style="margin-top: 50px;">
+
+                <div id="logo-container"><img src="images/map4.png" /></div>
+                <div class="headercontent animate-bottom">
+                    <img src="images/floheader.png" />
+                </div>
+                <div class="serverinformation">
+                    <h4>Play now at</h4>
+                    <h1 style="text-shadow: 3px 4px 5px #000;">flocraft.online</h1>
+                    <center>
+                        <hr style="background-color: white;">
+                    </center>
+                    <h5><span data-playercounter-ip="flocraft.online">0</span> players currently playing!</h5>
+                </div>
+                <div class="homebody">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Welcome to FloCraft!</h1>
+                        <p class="lead">FloCraft is a Surival Server with skills, land-claims, rankings, roles, special
+                            events, and much more!</p>
+                        <hr style="background-color: black" ;>
+                        <p>We have taken the time to provide all of the instructional content you need to play and
+                            succeed on FloCraft. Click below to see our guides!</p>
+                        <p class="lead">
+                            <a class="btn guidebutton btn-lg" href="/guides.html" role="button">Guides</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
 </body>
-   
+
 </html>
