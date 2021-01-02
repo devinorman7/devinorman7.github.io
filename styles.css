@@ -1,0 +1,66 @@
+#logo-container img {
+    width: 100%;
+    height: auto;
+    max-height: 705px;
+   
+ }
+
+.headercontent {
+    text-align: center;
+    width:100%;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 100px;
+    filter: drop-shadow(0 0 10px var(--color5));
+}
+
+.serverinformation {
+font-family:Arial, Helvetica, sans-serif;
+ background-color: var(--color3);
+ color: white;
+ text-align: center;
+ padding: 20px 0px 10px 0px;
+ border-style:solid;
+ border-width: 2px 0 0 0;
+ border-color: black;
+ filter: drop-shadow(0 0 10px var(--color5));
+}
+
+#whitehr {
+    background-color: white;
+    max-width:300px;
+}
+
+.homebody {
+    background-color: var(--color2);
+    padding: 50px
+}
+
+.guidebutton {
+    background-color: var(--color3); 
+    color: white;
+}
+
+.guidebutton:hover {
+    background-color: var(--color2);
+    color: var(--color4);
+}
+.animate-bottom {
+    position: absolute;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+

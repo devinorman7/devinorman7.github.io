@@ -1,0 +1,772 @@
+
+
+/* Large comments using http://patorjk.com/software/taag/#p=display&f=Standard*/
+/*
+   ____ _       _           _
+  / ___| | ___ | |__   __ _| |
+ | |  _| |/ _ \| '_ \ / _` | |
+ | |_| | | (_) | |_) | (_| | |
+  \____|_|\___/|_.__/ \__,_|_|
+*/
+*:not(.leaflet-zoom-animated):not(.leaflet-interactive) {
+    transition: 0.3s;
+    
+
+    /*Colour variables for colour scheme*/
+    --color1: white;     /*off-white*/
+    --color2: #feae50;     /*off-white*/
+    --color3: #20bbae;    /*light blue*/
+    --color4: black;
+    --color5: black;
+    outline: none !important;
+    text-size-adjust: none;
+}
+
+/*between-page animations*/
+.transition-fade {/*makes the website body normally shown*/
+    opacity: 1;
+}
+html.is-animating .transition-fade {/*fade out page for transition*/
+    opacity: 0;
+    transform: translate3d(0px, -10px, 0px);
+    transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+html.is-animating .clicktocloseoverlay{
+    background-color: var(--color1);
+    visibility: visible;
+    opacity: 1;
+}
+html.to-homepage .clicktocloseoverlay {
+    background-color: var(--color5)!important;
+}
+html.to-our-services .clicktocloseoverlay {
+    background-color: var(--color5)!important;
+}
+
+
+html.is-leaving .transition-fade {
+    transform: translate3d(0px, 10px, 0px);
+    transition-timing-function: cubic-bezier(1, 0, 1, 1);
+}
+html.is-animating .sidenav .transition-current {/*make the sidenav bar background transparent when changing page*/
+    border-bottom: 0px solid var(--color3);
+}
+html.is-animating hr {/*animate the top horizontal rule*/
+    max-width: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+html.is-animating {
+    scroll-behavior: unset;
+}
+.clicktocloseoverlay { /*Overlay for sidemenu and popups*/
+    position: fixed;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    visibility: hidden; /*so that it doesn't interfere with scrolling while invisible*/
+    opacity: 0;
+    z-index: 1001;
+}
+
+.clicktocloseoverlay.show {
+    background-color: rgba(0, 0, 0, .3);
+    visibility: visible;
+    opacity: 1;
+}
+.anchor {
+    position: absolute;
+    margin-top: -50px;
+    visibility: hidden;
+}
+/*
+  __  __       _     _ _        __  __
+ |  \/  | ___ | |__ (_) | ___  |  \/  | ___ _ __  _   _
+ | |\/| |/ _ \| '_ \| | |/ _ \ | |\/| |/ _ \ '_ \| | | |
+ | |  | | (_) | |_) | | |  __/ | |  | |  __/ | | | |_| |
+ |_|  |_|\___/|_.__/|_|_|\___| |_|  |_|\___|_| |_|\__,_|
+*/
+.topbar { /*top bar style*/
+    visibility: hidden;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 52px;
+    z-index: 1004;
+    background-color: var(--color3);
+    box-shadow: 0px 0px 20px var(--color5);
+}
+
+.topbar .logo { /*Logo position in topbar*/
+    height: 36px;
+    display: block;
+    margin: 8px auto;
+    filter: drop-shadow(0 0 10px var(--color5));
+}
+
+.menubtn { /*Menu button position*/
+    cursor: pointer;
+    width: 30px;
+    height: 35px;
+    position: relative;
+    float:right;
+    right: 35px;
+    top: 7px;
+}
+
+.bar1, /*menu button styling*/
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: var(--color1);
+    margin: 6px 0px;
+    border-radius: 2px;
+}
+
+/*Animation for the menu button when sidemenu is open*/
+.open .bar1 {transform: rotate(-45deg) translate(-7px, 7px);}
+.open .bar2 {opacity: 0;}
+.open .bar3 {transform: rotate(45deg) translate(-7px, -7px);}
+
+.sidenav { /*side navigation menu style*/
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    z-index: 1003;
+    top: 52px;
+    right: 320px;
+    background-color: var(--color3);
+    overflow-x: hidden;
+    box-shadow: 0px 0px 200px var(--color5);
+    transform: translate3d(3000px, 0px, 0px); /*keep it hidden at desktop resolutions*/
+
+}
+
+.sidenav a { /*style for main links in sidenav*/
+    padding: 1px 1px 1px 32px;
+    text-decoration: none;
+    height: 42px;
+    font-size: 25px;
+    color: var(--color1);
+    display: block;
+    white-space: nowrap;
+    opacity: 1;
+    border-left: 3px solid var(--color3)
+}
+
+.sidenav a:hover { /*change link style on hover*/
+    border-left: 3px solid var(--color1);
+    outline: none !important;
+    background-color: rgb(33, 154, 144);
+    padding: 1px 8px 1px 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.sidenav .transition-current a{ /*highlight current page*/
+    border-left: 3px solid var(--color1);
+}
+
+html.is-animating .sidenav a { /*swup animation when a link is clicked*/
+    transform: scale(1) !important;
+    text-shadow: 0px 0px 2px var(--color4) !important;
+    outline: none !important;
+}
+
+
+/*
+  ____            _    _                _____           _
+ |  _ \  ___  ___| | _| |_ ___  _ __   |_   _|__  _ __ | |__   __ _ _ __
+ | | | |/ _ \/ __| |/ / __/ _ \| '_ \    | |/ _ \| '_ \| '_ \ / _` | '__|
+ | |_| |  __/\__ \   <| || (_) | |_) |   | | (_) | |_) | |_) | (_| | |
+ |____/ \___||___/_|\_\\__\___/| .__/    |_|\___/| .__/|_.__/ \__,_|_|
+                               |_|               |_|
+*/
+.topnav {
+    /*side navigation menu style*/
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 1004;
+    top: 0px;
+    left: 0px;
+    background-color: var(--color3);
+    box-shadow: 0px 0px 20px var(--color5);
+}
+
+.topnav .logo { /*position the logo at the top of the sidenav*/
+    position: absolute;
+    padding: 9px 20px;
+    left: 0px; top: 0px;
+    height: 52px;
+    filter: drop-shadow(0 0 10px var(--color5));
+}
+
+.toplinks { /*container with top links inside it*/
+    position: relative;
+    left: 70px;
+    bottom: 3px;
+    height: 58px;
+}
+
+.toplinks div { /*div for each link*/
+    float: left;
+    margin: 10px 5px;
+    border-radius: 1px;
+    border-bottom: 1px solid var(--color3);
+}
+
+.topnav a { /*style for top link text*/
+    padding: 6px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color1);
+    float: left;
+    text-shadow: 0px 0px 2px var(--color4);
+
+}
+
+.toplinks div:hover { /*change link style on hover*/
+    outline: none !important;
+    border-bottom: 1px solid var(--color1);
+}
+
+.toplinks .transition-current { /*highlight current page*/
+    border-bottom: 1px solid var(--color1);
+}
+
+html.is-animating .toplinks .transition-current { /*swup animaton when link is clicked*/
+    border-bottom: 1px solid var(--color3);
+}
+
+html.is-animating .toplinks div { /*swup animation when link is clicked*/
+    transform: scale(1) !important;
+    box-shadow: none;
+    outline: none !important;
+}
+
+
+/*
+  ____                    ____            _
+ |  _ \ __ _  __ _  ___  | __ )  ___   __| |_   _
+ | |_) / _` |/ _` |/ _ \ |  _ \ / _ \ / _` | | | |
+ |  __/ (_| | (_| |  __/ | |_) | (_) | (_| | |_| |
+ |_|   \__,_|\__, |\___| |____/ \___/ \__,_|\__, |
+             |___/                          |___/
+*/
+body {/*body styling*/
+    background-color: var(--color1); /*if not set default to off-white*/
+    margin: 0px;
+}
+
+.main{
+    position: absolute;
+    margin: 70px 0px 0px 0px;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+hr {
+    transition-duration: 1.2s!important;
+    border: none;
+    
+    height: 3px;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0px;
+}
+
+
+.main a { /*links in page body*/
+    color: var(--color3);
+    text-decoration: none;
+}
+
+/*Flex elements*/
+.cardlayout {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 100%;
+}
+.cardrow {
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+    flex: 1 0 auto;
+    max-width: 100vw;
+}
+
+.cardwork { /*for Our-Work page*/
+    padding: 0px 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100vw;
+}
+.cardvalues { /*for Our-Work page*/
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    max-width: 100vw;
+}
+.cardvalues .cardtext {
+    width: 1024px;
+    padding: 0px 30px;
+    flex-grow: 100;
+}
+.cardvalues .cardimg {
+    min-height: 100px;
+    flex-grow: 1;
+}
+.cardtext {
+    max-width: 1024px;
+    flex: 3 0 300px;
+    padding: 30px;
+}
+.cardimg {
+    flex: 1 0 300px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    max-width: 1024px;
+    background-position: center;
+}
+.cardimg.nocover {
+    background-size: contain !important;
+}
+.cardimg.maxwidth {
+    max-width: 100vw;
+    max-width: 1024px;
+    height: 400px;
+    margin: 0px 30px;
+}
+a.cardimg:hover {
+    transform: scale(1.03);
+}
+.cardthird{
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 25%;
+    background-color: var(--color5);
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.cardthird h2 {
+    color: var(--color1);
+    padding: 10px;
+    margin: 0px;
+    font-size: 2.0em;
+}
+.cardthird h3 {
+    color: var(--color1);
+    padding: 10px 10px 50px 10px;
+    margin: 0px;
+    font-size: 1.5em;
+}
+.cardthird .learnmore {
+    position:absolute;
+    padding: 10px;
+    bottom:0; right:0;
+}
+.cardthird img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.cardthird:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 3px #111111
+}
+.cta-buttons {
+    margin: 30px auto;
+    justify-content: center;
+    display: flex;
+
+}
+.cta-buttons a {
+    font-size: 1.5rem;
+    color: var(--color1);
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    background-color: var(--color3);
+    position: relative;
+    text-shadow: 0 0 1px black;
+}
+.cta-buttons a:hover { /*change link style on hover*/
+    transform: scale(1.03);
+    box-shadow: 1px 1px 3px #111111
+}
+
+footer {
+    height: 72px;
+    background-color: var(--color5);
+    border-top: 1px solid var(--color1);
+    flex-shrink: 0;
+}
+footer .copyright {
+    position: absolute;
+    right: 28px;
+    font-size: 15px;
+    margin: 28px 0px 0px 0px;
+    color: var(--color1)
+}
+footer .footerlink {
+    position: absolute;
+    left: 28px;
+    float: left;
+    font-size: 15px;
+    margin: 28px 0px;
+    color: var(--color1);
+}
+.footerlink:hover {
+    text-shadow: 0 0 10px white;
+}
+footer .footersocial {
+    position: absolute;
+    padding: 0px 10px;
+    overflow: hidden;
+}
+footer .footersocial a img {
+    height: 32px;
+    float: left;
+    padding: 20px 10px;
+}
+footer .footersocial a img:hover {
+    transform: scale(1.07);
+}
+
+/*SPECIFIC TO PAGES OF SITE*/
+/*The-Team*/
+.flexteamcontainer { /*container for the team pictures section*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.flexitemteam { /*unit for each team member card*/
+    display: flex;
+    flex-flow: column wrap;
+    width: 160px;
+    height: 295px;
+    padding: 0px;
+    margin: 30px 30px;;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.flexitemteam img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-size: cover;
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCABkAGQDASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAUGAQIDBAcI/8QAKxAAAgICAAQGAQQDAAAAAAAAAAECAwQRBQYhMRITI0FRYSIkJWJxcoGh/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAXEQEBAQEAAAAAAAAAAAAAAAAAAREh/9oADAMBAAIRAxEAPwD95gA8jqAAADhl5deFS7LHpL2+StZXMeRbP0vTiXDVsBTFxzMjv1e5KcN5i8yca70k308RcSVPgwmpJNdUzJlQAAAAAAAAA1m/DFv4QFV5izXflOpP8Ie32RB2zLPNyrZLpuTOJtkHYAC38v5jycNRk9yh0JQrPK1ur7K9d1ssxmtQABAAAAAADS1brl/RuYYFAvTjdNNae2aHs4tS6c+1P3ezxm2QAATPK6/WTf8AEtRAcrUuNdljXRvSJ8zWoAAgAAAAAAAAr3M+GtQvXfsyuly48v22wpptmhmMXOSiu7ejB6OHdc2n/JAXHh2MsXErh766nqMLsjJloABAAAAGJSUVtvS+yPy+OY2L08Xjl8RKJE8+TnU4sXKyaX0VzM5juvTjWvLj/wBImds7XuUnJ/ZcTUzxbj0cul01x/F92yEAKgdMa7yL4Wa34XvRzAFuwuYKMnUZ+nL7JOM4zW4tNfR8+PVicSvw5bhN6+GTF1eQQOJzPCSSvj4X8omKMurJinXNS/2RXYAEFO4pxizMtahJxqXZIjW9gG2QAAAAAAAAAADeq+dMlKEnFr4NABY8TmWMaIq2O5rptArgHDaAAAAAAAAAAAAAAAAAAD//2Q==);
+
+
+}
+.flexitemteam .name{
+    position: absolute;
+    top: 165px; left: 0px; right: 0px;
+    margin: 0px 1px;
+    font-size: 1.4em;
+    line-height: 1.1;
+    text-align: center;
+}
+.flexitemteam .title {
+    position: absolute;
+    top: 220px; left: 0px; right: 0px;
+    margin: 0px 1px;
+    font-size: 1.1em;
+    line-height: 1.1;
+    text-align: center;
+}
+.flexitemteam .action {
+    position: absolute;
+    top: 265px; left: 0px; right: 0px;
+    margin: 0px 1px;
+    font-size: 1.1em;
+    line-height: 1.1;
+    text-align: center;
+    color: transparent;
+}
+.flexitemteam biography {
+    visibility: hidden;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.flexitemteam:hover {
+    box-shadow: 1px 1px 10px var(--color4);
+    transform: scale(1.03);
+}
+
+.flexitemteam:hover img {
+    border-radius: 0px;
+}
+.flexitemteam:hover .action {
+    color: var(--color5);
+}
+
+.teambio { /*team bio popups*/
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 1002;
+    opacity: 1;
+    height: calc(100vh - 130px);
+    width: 90vw;
+    max-width: 1024px;
+    top: 100px;
+    margin: 0 auto;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 3px var(--color5);
+    transform: translateY(-100vh);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.teambio .closebtn {
+    position: absolute;
+    transform: rotate(45deg);
+    right: 10px;
+    top: 0px;
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.teambio .closebtn:hover {
+    transform: scale(1.03) rotate(45deg);
+    outline: none !important;
+    cursor: pointer;
+}
+
+.teambio img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.teambio .name {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin: 0px 10px;
+    max-width: 200px;
+    font-size: 1.7em;
+}
+
+.teambio .title {
+    position: relative;
+    left: 0px;
+    top: 5px;
+    margin: 0px 10px;
+    max-width: 200px;
+    font-size: 1.3em;
+}
+
+.teambio .biography {
+    position: absolute;
+    font-size: 1.2em;
+    left: 220px;
+    top: 0px;
+    right: 28px;
+    height: calc(100vh - 130px);
+    margin: 0;
+    padding: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.teambio .action{
+    visibility: hidden;
+}
+
+.teambio h4:after {
+    pointer-events: none;
+    content: "";
+    position: fixed;
+    left: 220px;
+    right: 28px;
+    top: 0px;
+    bottom: 0px;
+    box-shadow: inset -0px 20px 10px -10px var(--color1), inset 0px -20px 10px -10px var(--color1);
+}
+@media only screen and (max-width: 500px) {
+    .teambio .name,
+    .teambio .title {
+        max-width: unset!important;
+    }
+    .teambio .biography {
+        left: 10px;
+        top: 320px;
+        right: 10px;
+        height: calc(100vh - 432px)!important;
+    }
+    .teambio .biography:after {
+        left: 10px;
+        right: 10px;
+        top: 320px;
+        bottom: 0px;
+    }
+}
+
+/*Insights*/
+.newscard {
+    flex-grow: 1;
+    max-width: 600px;
+    background-color: var(--color5);
+    margin: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+.newscard.latest {
+    background-color: var(--color3)
+}
+.newscard:hover {
+    transform: scale(1.03);
+    box-shadow: 1px 1px 3px #696969
+}
+.newscard .learnmore {
+    position:absolute;
+    padding: 10px;
+    bottom:0; right:0;
+}
+.newscard h2 {
+    color: var(--color1);
+    padding: 15px 15px 0px 15px;
+    margin: 0px;
+    font-size: 2.1em;
+}
+.newscard h3 {
+    color: var(--color1);
+    padding: 5px 15px 5px 15px;
+    margin: 0px;
+    font-size: 1.3em!important;
+}
+.newscard h4 {
+    color: var(--color1);
+    padding: 10px 10px 30px 10px;
+    margin: 0px;
+    font-size: 1em;
+}
+.oldarticles { /*for Our-Work page*/
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 100vw;
+}
+.oldarticles .newscard {
+    max-width: 600px;
+}
+
+.newsarticle h3, newsarticle li, .newsarticle a, .newsarticle i, .newsarticle b  {
+    font-family: "Times New Roman", "Nimbus Roman", "Open Sans"!important;
+}
+.newsarticle h2 {
+    font-family: "Times New Roman", "Open Sans"!important;
+}
+
+/*
+  __  __       _     _ _           ____                  _  __ _
+ |  \/  | ___ | |__ (_) | ___     / ___| _ __   ___  ___(_)/ _(_) ___
+ | |\/| |/ _ \| '_ \| | |/ _ \____\___ \| '_ \ / _ \/ __| | |_| |/ __|
+ | |  | | (_) | |_) | | |  __/_____|__) | |_) |  __/ (__| |  _| | (__
+ |_|  |_|\___/|_.__/|_|_|\___|    |____/| .__/ \___|\___|_|_| |_|\___|
+                                        |_|
+*/
+@media only screen and (max-width: 1024px) {
+    .topbar { /*show the mobile navmenu*/
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .topnav { /*get rid of the desktop navbar*/
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .sidenav .logo {
+        padding: 20px;
+        height: 55px;
+        filter: drop-shadow(0 0 20px var(--color5));
+    }
+
+    .sidenav.open { /*when the side menu is open, only on mobile*/
+    transform: translate3d(320px, 0px, 0px)!important;
+    }
+
+    .main {
+        margin: 50px 0px 0px 0px;
+    }
+
+    .main h1 {
+        font-size:2.5em;
+    }
+
+    .main h2 {
+        font-size: 2.1em;
+    }
+
+    .main h3 {
+        font-size: 1.6em;
+    }
+    .cardthird {
+        max-width: unset;
+        width: 40%
+    }
+    .teambio h2{
+        max-width: 200px;
+    }
+    .teambio h3 {
+        max-width: 200px;
+    }
+    .teambio{
+        top: 82px;
+        height: calc(100vh - 112px);
+    }
+    .teambio h4 {
+        height: calc(100vh - 112px);
+
+    }
+
+}
+@media only screen and (max-width: 675px) {
+    .cardimg {
+        order: -1;
+    }
+}
+@media only screen and (max-width: 512px) {
+    footer {
+        height: 98px!important;
+    }
+    footer .copyright {
+        position: relative;
+        left: 20px;
+        top: 40px;
+    }
+}
