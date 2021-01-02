@@ -1,3 +1,3 @@
 const swup = new Swup({
-    plugins: [new SwupDebugPlugin()]
+    plugins: [new SwupScriptsPlugin(), new SwupDebugPlugin()]
   });
