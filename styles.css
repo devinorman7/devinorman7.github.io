@@ -55,6 +55,19 @@
     animation-duration: 1s
 }
 
+.footer {
+    color: white;
+    text-decoration: none;
+}
+
+#footerlink {
+    text-decoration: none;
+    color: var(--color3);
+}
+
+#footerlink:hover {
+    color: var(--color2);
+}
 @-webkit-keyframes animatebottom {
     from {
         bottom: -100px;

@@ -18,6 +18,7 @@
     --color3: #20bbae;    /*light blue*/
     --color4: black;
     --color5: black;
+    --color6: #3da199;
     outline: none !important;
     text-size-adjust: none;
 }
@@ -32,7 +33,7 @@ html.is-animating .transition-fade {/*fade out page for transition*/
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
 }
 html.is-animating .clicktocloseoverlay{
-    background-color: var(--color1);
+    background-color: var(--color6);
     visibility: visible;
     opacity: 1;
 }
@@ -270,7 +271,7 @@ body {/*body styling*/
 }
 
 hr {
-    transition-duration: 1.2s!important;
+    transition-duration: 2.0s!important;
     border: none;
     
     height: 3px;
