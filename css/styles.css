@@ -23,8 +23,8 @@
     #logo-container img {
         width: 100%;
         height: auto;
-        min-height: 430px;
-        max-height: 430px;
+        min-height: 420px;
+        max-height: 420px;
         object-fit: cover;
     
     }
