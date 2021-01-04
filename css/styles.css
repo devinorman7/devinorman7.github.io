@@ -20,6 +20,14 @@
         height: auto;
         max-width: 490px;
     }
+    #logo-container img {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        max-height: 500px;
+        object-fit: cover;
+    
+    }
 }
 
 .headercontent {
