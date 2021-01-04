@@ -58,7 +58,8 @@
 .footer {
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
+    margin-top: 23px;
 }
 
 #footerlink {
