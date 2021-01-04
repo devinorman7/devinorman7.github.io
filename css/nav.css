@@ -271,15 +271,17 @@ body {/*body styling*/
 }
 
 hr {
-    transition-duration: 2.0s!important;
+    transition-duration: 1.5s!important;
     border: none;
-    
     height: 3px;
     width: 100%;
     max-width: 500px;
     margin: 10px 0px;
 }
 
+#smallhr {
+    width: 30%
+}
 
 .main a { /*links in page body*/
     color: var(--color3);
