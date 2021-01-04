@@ -104,7 +104,7 @@ html.is-animating {
     height: 36px;
     display: block;
     margin: 8px auto;
-    filter: drop-shadow(0 0 10px var(--color5));
+   /*  filter: drop-shadow(0 0 10px var(--color5)); */
 }
 
 .menubtn { /*Menu button position*/
@@ -710,7 +710,7 @@ footer .footersocial a img:hover {
     .sidenav .logo {
         padding: 20px;
         height: 55px;
-        filter: drop-shadow(0 0 20px var(--color5));
+     /*   filter: drop-shadow(0 0 20px var(--color5)); */
     }
 
     .sidenav.open { /*when the side menu is open, only on mobile*/
