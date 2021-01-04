@@ -34,7 +34,7 @@
     text-align: center;
     width: 100%;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 100px;
 }
 
@@ -93,26 +93,41 @@
 .contentpage {
     margin: 80px 30px 30px 30px
 }
-@-webkit-keyframes animatebottom {
+@keyframes fadeInUp {
     from {
-        bottom: -100px;
-        opacity: 0
+        transform: translate3d(0,40px,0)
     }
 
     to {
-        bottom: 0px;
+        transform: translate3d(0,0,0);
         opacity: 1
     }
 }
 
-@keyframes animatebottom {
+@-webkit-keyframes fadeInUp {
     from {
-        bottom: -100px;
-        opacity: 0
+        transform: translate3d(0,40px,0)
     }
 
     to {
-        bottom: 0;
+        transform: translate3d(0,0,0);
         opacity: 1
     }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
 }
