@@ -419,6 +419,7 @@ footer {
     height: 72px;
     background-color: var(--color5);
     border-top: 1px solid var(--color1);
+    flex-shrink: 1;
     color: var(--color1);
 }
 
