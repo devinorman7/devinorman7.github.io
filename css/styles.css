@@ -12,8 +12,6 @@
     position: absolute;
     top: 100px;
     filter: drop-shadow(0 0 10px var(--color5));
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .serverinformation {
