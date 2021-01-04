@@ -758,7 +758,7 @@ footer .footersocial a img:hover {
 @media only screen and (max-width: 512px) {
     footer {
         height: 98px!important;
-        font-size: 0.91em;
+        font-size: 0.890em;
     }
     footer .copyright {
         position: relative;
