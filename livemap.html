@@ -111,6 +111,11 @@
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
+        <script>
+            if(top != window) {
+              top.location = window.location
+            }
+          </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -156,7 +161,7 @@ _______                               _____          _
         </div> <!-- end of the topmenu links -->
         <main>
             <div class="transition-fade" style="margin-top: 50px;">
-                <iframe src="https://tinyurl.com/y2vqpll6" width="100%" height="1200">
+                <iframe src="http://flocraft.online:8123/" width="100%" height="1200">
                     <p>Your browser does not support iframes.</p>
                   </iframe>                  
                 
