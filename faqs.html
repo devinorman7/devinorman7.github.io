@@ -112,6 +112,11 @@
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
+        <script>
+            $(function () {
+              $('#myList a:last-child').tab('show')
+            })
+          </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -160,7 +165,28 @@ _______                               _____          _
                 <div class="contentpage">
                     <h1 class="display-4">FAQs</h1>
                     <hr style="background-color: var(--color3);">
-                
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="tab-content">
+                              <div class="tab-pane active" id="home" role="tabpanel">1</div>
+                              <div class="tab-pane" id="profile" role="tabpanel">2</div>
+                              <div class="tab-pane" id="messages" role="tabpanel">3</div>
+                              <div class="tab-pane" id="settings" role="tabpanel">4</div>
+                            </div>
+                          </div>
+                        <div class="col-1">
+                    <div class="list-group" id="myList" role="tablist">
+                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab" style="min-width: 100px;">Home</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab" style="min-width: 100px;">Profile</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab" style="min-width: 100px;">Messages</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab" style="min-width: 100px;">Settings</a>
+                      </div>
+                    </div>
+                    
+                </div>
+            </div>
+                      
                 </div>
                 <footer class="page-footer font-small">
                     <div class="text-center py-3 footer">
