@@ -104,7 +104,7 @@ html.is-animating {
     height: 36px;
     display: block;
     margin: 8px auto;
-    text-shadow: 0px 0px 10px var(--color5) !important;
+    text-shadow: 0px 0px 10px var(--color) !important;
    /*  filter: drop-shadow(0 0 10px var(--color5)); */
 }
 
@@ -711,7 +711,7 @@ footer .footersocial a img:hover {
     .sidenav .logo {
         padding: 20px;
         height: 55px;
-        text-shadow: 0px 0px 10px var(--color5) !important;
+        text-shadow: 0px 0px 10px var(--color4) !important;
      /*   filter: drop-shadow(0 0 20px var(--color5)); */
     }
 

@@ -25,10 +25,9 @@
     <script defer src="https://unpkg.com/@swup/debug-plugin@1.0.3/dist/SwupDebugPlugin.min.js"></script>
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
     <script defer src="./js/script.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js">
-    </script>
-
-    <title>Rules</title>
+    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    
+    <title>Home</title>
 </head>
 
 <body>
@@ -54,7 +53,7 @@
             <div>
                 <a href="/about.html" onclick="navClose()">About</a>
             </div>
-            <div class="transition-current">
+            <div>
                 <a href="/rules.html" onclick="navClose()">Rules</a>
             </div>
             <div>
@@ -66,7 +65,7 @@
             <div>
                 <a href="/vote.html" onclick="navClose()">Vote</a>
             </div>
-            <div>
+            <div class="transition-current">
                 <a href="/livemap.html" onclick="navClose()">Live Map</a>
             </div>
             <div>
@@ -101,12 +100,11 @@
             }
 
             function teamitemopen(n) {
-                document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
-                document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0]
-                    .innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
-                document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
+                    document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
+                    document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
 
-            }
+                }
 
             function teamitemclose() {
                 document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
@@ -136,7 +134,7 @@ _______                               _____          _
                 <div>
                     <a href="/about.html">About</a>
                 </div>
-                <div class="transition-current">
+                <div>
                     <a href="/rules.html">Rules</a>
                 </div>
                 <div>
@@ -145,10 +143,10 @@ _______                               _____          _
                 <div>
                     <a href="https://discord.gg/HaJAMeU">Discord</a>
                 </div>
-                <div>
+                <div >
                     <a href="/vote.html">Vote</a>
                 </div>
-                <div>
+                <div class="transition-current">
                     <a href="/livemap.html">Live Map</a>
                 </div>
                 <div>
@@ -158,44 +156,18 @@ _______                               _____          _
         </div> <!-- end of the topmenu links -->
         <main>
             <div class="transition-fade" style="margin-top: 50px;">
-                <div class="contentpage">
-                    <h1 class="display-4">Rules</h1>
-                    <hr style="background-color: var(--color3);">
-                   <!-- <div>
-                        <ol class="rulessection">
-                            <li>No Griefing</li>
-                            <li>No Chat Spam</li>
-                            <li>No Excessive Swearing</li>
-                            <li>No Asking Admin for Free Items</li>
-                            <li>No Trolling</li>
-                            <li>Respect All Players</li>
-                            <li>Obey Moderators</li>
-                            <li>No Racist or Sexual Remarks</li>
-                            <li>No Cheating</li>
-                            <ol type="a">
-                                <li>No Hacks</li>
-                                <li>No Glitches</li>
-                                <li>No Exploits</li>
-                                <li>No Mods</li>
-                            </ol>
-                            <li>Do Not Claim Other Players' Builds</li>
-                        </ol>
-                        </ol>
-                    </div> -->
-                    <div class="rulediv">
-                    <h4>1.</h4>
-                    <p>No Griefing</p>
+                <iframe src="http://flocraft.online:8123/" width="100%" height="1200">
+                    <p>Your browser does not support iframes.</p>
+                  </iframe>                  
+                
+                </div>
+                <footer class="page-footer font-small">
+                    <div class="text-center py-3 footer">
+                    <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin Orman</a></p>
                     </div>
-                </div>
+                </footer>   
             </div>
-            <footer class="page-footer font-small">
-                <div class="text-center py-3 footer">
-                    <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin
-                            Orman</a></p>
-                </div>
-            </footer>
-    </div>
-    </main>
+        </main>
 </body>
 
 </html>

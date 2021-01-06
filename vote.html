@@ -26,8 +26,8 @@
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
     <script defer src="./js/script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
-
-    <title>Vote</title>
+    
+    <title>Home</title>
 </head>
 
 <body>
@@ -66,6 +66,9 @@
                 <a href="/vote.html" onclick="navClose()">Vote</a>
             </div>
             <div>
+                <a href="/livemap.html" onclick="navClose()">Live Map</a>
+            </div>
+            <div>
                 <a href="/faqs.html" onclick="navClose()">FAQs</a>
             </div>
         </div> <!-- end of the sidemenu links -->
@@ -97,12 +100,11 @@
             }
 
             function teamitemopen(n) {
-                document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
-                document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0]
-                    .innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
-                document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
+                    document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
+                    document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
 
-            }
+                }
 
             function teamitemclose() {
                 document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
@@ -145,6 +147,9 @@ _______                               _____          _
                     <a href="/vote.html">Vote</a>
                 </div>
                 <div>
+                    <a href="/livemap.html">Live Map</a>
+                </div>
+                <div>
                     <a href="/faqs.html">FAQs</a>
                 </div>
             </div>
@@ -153,7 +158,18 @@ _______                               _____          _
             <div class="transition-fade" style="margin-top: 50px;">
                 <div class="contentpage">
                     <h1 class="display-4">Vote</h1>
-                    <hr style="background-color: var(--color3);"
+                    <hr style="background-color: var(--color3);">
+                    <p>Receive 1 vote key in game by voting with your Minecraft username on the sites below. Vote on each site every 24 hours. You do not have to be online to vote. Thank you for helping more people find this server. </p>
+                    <div class="list-group">
+                        <a href="https://www.planetminecraft.com/server/flocraft-smp-vps/vote/" class="list-group-item list-group-item-action">Planet Minecraft</a>
+                        <a href="https://minecraft.buzz/server/822&tab=vote" target="_blank" class="list-group-item list-group-item-action">MineCraft.Buzz</a>
+                        <a href="https://mc-lists.org/server-flocraft.1107/vote" target="_blank" class="list-group-item list-group-item-action">MC Lists</a>
+                        <a href="https://minecraftservers.org/server/599406" target="_blank" class="list-group-item list-group-item-action">Minecraft Servers</a>
+                        <a href="https://minecraft-server.net/vote/FloCraft/" target="_blank" class="list-group-item list-group-item-action">Minecraft Server</a>
+                        <a href="https://minecraft-mp.com/server/273143/vote/" target="_blank" class="list-group-item list-group-item-action">Minecraft MP</a>
+                        <a href="https://minecraft-server-list.com/server/469855/vote/" target="_blank" class="list-group-item list-group-item-action">Minecraft Server List</a>
+                        <a href="https://topg.org/Minecraft/in-619206" target="_blank" class="list-group-item list-group-item-action">Top G</a>
+                      </div>
                 </div>
                 </div>
                 <footer class="page-footer font-small">

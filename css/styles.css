@@ -14,7 +14,7 @@
     max-width: 500px;
 }
 
-@media only screen and (max-width: 912px) {
+@media only screen and (max-width: 512px) {
     #flocraft-text-container img {
         width: 90%;
         height: auto;
@@ -27,6 +27,10 @@
         max-height: 420px;
         object-fit: cover;
     
+    }
+
+    #mobilecard {
+        width: 100%
     }
 }
 
@@ -130,4 +134,76 @@
     opacity: 0;
     animation-name: fadeInUp;
     -webkit-animation-name: fadeInUp;
+}
+/* side nav on guides*/
+
+ul.navbar-right {
+    min-width: 100px;
+    margin-bottom: 0px;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    list-style-type: none;
+    background-color: var(--color3);
+    box-shadow: 0px 0px 20px var(--color5);
+    color: white;
+  }
+  ul.navbar-right li a{
+    padding: 0px 20px 0px 10px;
+    text-decoration: none;
+    height: 42px;
+    font-size: 15px;
+    color: var(--color1);
+    display: block;
+    white-space: nowrap;
+    opacity: 1;
+    border-left: 3px solid var(--color3)
+  }
+
+  ul.navbar-right li:hover {
+  border-left: 3px solid var(--color1);
+  outline: none !important;
+  background-color: rgb(33, 154, 144);
+  }
+
+  html.is-animating .transition-fade .no-animation {/*fade out page for transition*/
+    opacity: 1;
+}
+.guidecontent {
+margin-right: 150px;
+}
+
+.rulessection {
+    font-size: 30px;
+}
+
+.rulediv {
+    background-color: var(--color2);
+}
+
+.staffimage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 20px 50px 20px 50px;
+    margin-top: 20px;
+    background-image: url(/images/netherportal.jpg);
+    backdrop-filter: blur(5px);
+    
+  }
+
+.staffcard {
+    background-color: var(--color3);
+}
+
+.modalbutton {
+    background-color: var(--color4);
+    color: white;
+}
+
+.modalbutton:hover {
+    background-color: var(--color1);
+    color: var(--color4);
 }
