@@ -14,7 +14,7 @@
     max-width: 500px;
 }
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 912px) {
     #flocraft-text-container img {
         width: 90%;
         height: auto;
@@ -29,9 +29,6 @@
     
     }
 
-    #mobilecard {
-        width: 100%
-    }
 }
 
 .headercontent {
