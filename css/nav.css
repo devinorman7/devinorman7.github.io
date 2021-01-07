@@ -71,7 +71,7 @@ html.is-animating {
 }
 
 .clicktocloseoverlay.show {
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .5);
     visibility: visible;
     opacity: 1;
 }
@@ -104,7 +104,7 @@ html.is-animating {
     height: 36px;
     display: block;
     margin: 8px auto;
-    text-shadow: 0px 0px 10px var(--color) !important;
+    text-shadow: 0px 0px 2px var(--color4) !important;
    /*  filter: drop-shadow(0 0 10px var(--color5)); */
 }
 
@@ -114,7 +114,7 @@ html.is-animating {
     height: 35px;
     position: relative;
     float:right;
-    right: 35px;
+    right: 30px;
     top: 7px;
 }
 
@@ -135,7 +135,7 @@ html.is-animating {
 
 .sidenav { /*side navigation menu style*/
     height: 100vh;
-    width: 300px;
+    width: 200px;
     position: fixed;
     z-index: 1003;
     top: 52px;
@@ -711,7 +711,7 @@ footer .footersocial a img:hover {
     .sidenav .logo {
         padding: 20px;
         height: 55px;
-        text-shadow: 0px 0px 10px var(--color4) !important;
+        text-shadow: 0px 0px 2px var(--color4) !important;
      /*   filter: drop-shadow(0 0 20px var(--color5)); */
     }
 

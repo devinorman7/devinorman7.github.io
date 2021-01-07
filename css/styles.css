@@ -164,9 +164,7 @@ ul.navbar-right {
   background-color: rgb(33, 154, 144);
   }
 
-  html.is-animating .transition-fade .no-animation {/*fade out page for transition*/
-    opacity: 1;
-}
+
 .guidecontent {
 margin-right: 150px;
 }
@@ -203,4 +201,18 @@ margin-right: 150px;
 .modalbutton:hover {
     background-color: var(--color1);
     color: var(--color4);
+}
+
+.livemap {
+    
+     top:50px; 
+     left:0; 
+     right:0;
+      width:100%; 
+      height:87vh;
+       border:none;
+        margin:0; 
+        padding:0; 
+        overflow:hidden; 
+        margin-bottom: -3px;
 }
