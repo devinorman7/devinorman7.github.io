@@ -8,7 +8,7 @@
     "theme_color": "#20bbae",
     "icons": [
       {
-        "src": "/images/",
+        "src": "/images/cursivelogo3.png",
         "sizes": "192X192",
         "type": "image/png"
       }
