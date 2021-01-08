@@ -101,7 +101,7 @@ html.is-animating {
 }
 
 .topbar .logo { /*Logo position in topbar*/
-    height: 4vh;
+    height: 5vh;
     display: block;
     margin: 8px auto;
     text-shadow: 0px 0px 2px var(--color4) !important;
@@ -262,15 +262,13 @@ html.is-animating .toplinks div { /*swup animation when link is clicked*/
              |___/                          |___/
 */
 body {/*body styling*/
-    background-color: var(--color1); /*if not set default to off-white*/
+    background-color:  #20bbae; /*if not set default to off-white*/
     margin: 0px;
 }
 
-.main{
-    position: absolute;
-    margin: 70px 0px 0px 0px;
-    padding: 20px;
-    overflow-x: hidden;
+main{
+    background-color: white;
+    margin: 0px;
 }
 
 hr {
