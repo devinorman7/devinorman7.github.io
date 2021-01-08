@@ -138,6 +138,7 @@ ul.navbar-right {
     background-color: var(--color3);
     box-shadow: 0px 0px 20px var(--color5);
     color: white;
+  
   }
   ul.navbar-right li a{
     padding: 0px 20px 0px 10px;
@@ -148,7 +149,7 @@ ul.navbar-right {
     display: block;
     white-space: nowrap;
     opacity: 1;
-    border-left: 3px solid var(--color3)
+    border-left: 3px solid var(--color3);
   }
 
   ul.navbar-right li:hover {
@@ -158,9 +159,6 @@ ul.navbar-right {
   }
 
 
-.guidecontent {
-margin-right: 150px;
-}
 
 .rulessection {
     font-size: 30px;
@@ -230,21 +228,9 @@ margin-right: 150px;
         
 }
 
-.guide-container {
-    margin-left: 30px;
-    padding-right: 90px;
-}
 
-.guide-container p h3 {
-    margin-left: 30px;
-    padding-right: 90px;
-}
 
-.guide-container pre {
-    margin-left: 0px;
-    padding-right: 90px;
-    overflow: hidden;
-}
+
 
 .tabs {
     position: fixed;
@@ -366,3 +352,30 @@ pre {
     max-width: 400px;
 }
 
+
+.guide-container {
+    position: relative;
+    left: 0px;
+    margin-left: 0;
+    padding-left: 0;
+    right:200px;
+    padding-right: 200px;
+}
+
+.guide-container p {
+    position: relative;
+    left: 0px;
+    margin-left: 0;
+    padding-left: 0;
+    right:200px;
+    padding-right: 200px;
+}
+
+.guide-container pre {
+    position: relative;
+    left: 0px;
+    margin-left: 0;
+    padding-left: 0;
+    right:200px;
+    padding-right: 200px;
+}
