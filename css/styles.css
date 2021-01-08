@@ -215,10 +215,12 @@ margin-right: 150px;
 
 .tabs {
     position: fixed;
-    right: 0;
-    top: 50px;
+    right: 50px;
+    top: 6.6vh;
     margin-bottom: 0;
-    min-width:120px;
+    max-width: 0px;
+    font-size: 10px;
+    text-align: center;
 }
 .tabs a{
     margin-right: 5px;
