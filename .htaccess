@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTPS} =on
+RewriteCond %{HTTP_HOST} ^flocraft\.site$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.flocraft\.site$
+RewriteRule .* http://flocraft.site%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^www\.flocraft\.site$
+RewriteRule .* http://flocraft.site%{REQUEST_URI} [R=301,L]
+
+#b) Redirects all site visitors to the same page, but with forced http://www + redirects from http://example.com to http://www.example.com
+
+
+#RewriteEngine On
+#RewriteBase /
+
+#RewriteCond %{HTTPS} =on
+#RewriteCond %{HTTP_HOST} ^flocraft\.site$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.flocraft\.site$
+#RewriteRule .* http://flocraft.site%{REQUEST_URI} [R=301,L]
+
+#RewriteCond %{HTTPS} !=on
+#RewriteCond %{HTTP_HOST} ^flocraft\.site$
+#RewriteRule .* http://www.flocraft.site%{REQUEST_URI} [R=301,L]
