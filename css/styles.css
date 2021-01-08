@@ -231,9 +231,19 @@ margin-right: 150px;
 }
 
 .guide-container {
-    position: relative;
-    margin-left: 15px;
+    margin-left: 30px;
     padding-right: 90px;
+}
+
+.guide-container p h3 {
+    margin-left: 30px;
+    padding-right: 90px;
+}
+
+.guide-container pre {
+    margin-left: 0px;
+    padding-right: 90px;
+    overflow: hidden;
 }
 
 .tabs {
@@ -352,9 +362,7 @@ pre {
     border-color:  #bfbfbf;
     padding: 7px;
     font-weight: bold;
-    margin:0px 0px 5px 0px;
+    margin:0px 90px 5px 0px;
+    max-width: 400px;
 }
 
-.guidepagefit {
-    margin-right: 90px;
-}
