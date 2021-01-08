@@ -94,7 +94,7 @@ html.is-animating {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 6.5vh;
+    height: 6.6vh;
     z-index: 1004;
     background-color: var(--color3);
     box-shadow: 0px 0px 20px var(--color5);
@@ -114,7 +114,7 @@ html.is-animating {
     height: 6vh;
     position: relative;
     float:right;
-    right: 30px;
+    right: 25px;
     top: 1vh;
     bottom: 1vh;
 }
@@ -139,7 +139,7 @@ html.is-animating {
     width: 200px;
     position: fixed;
     z-index: 1003;
-    top: 52px;
+    top: 6.6vh;
     right: 320px;
     background-color: var(--color3);
     overflow-x: hidden;
@@ -190,7 +190,7 @@ html.is-animating .sidenav a { /*swup animation when a link is clicked*/
 */
 .topnav {
     /*side navigation menu style*/
-    height: 50px;
+    height: 6.6vh;
     width: 100%;
     position: fixed;
     z-index: 1004;
@@ -202,10 +202,11 @@ html.is-animating .sidenav a { /*swup animation when a link is clicked*/
 
 .topnav .logo { /*position the logo at the top of the sidenav*/
     position: absolute;
-    padding: 9px 20px;
+    padding: 4px 20px;
     left: 0px; top: 0px;
     height: 52px;
     filter: drop-shadow(0 0 10px var(--color5));
+    margin-top: 5px;
 }
 
 .toplinks { /*container with top links inside it*/
