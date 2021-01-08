@@ -215,13 +215,69 @@ margin-right: 150px;
 
 .tabs {
     position: fixed;
-    right: 85px;
+    right: 90px;
     top: 6.6vh;
     margin-bottom: 0;
     max-width: 0px;
     text-align: center;
+    z-index: 10000000000000;
 }
 .tabs a{
     margin-right: 5px;
+    background-color: var(--color3);
+    color: var(--color1);
+    border-color: #1ca498;
 }
 
+.tabs a:hover{
+    margin-right: 5px;
+    background-color: #178078;
+    color: var(--color1);
+}
+
+a.active{
+    background-color: var(--color1) !important;
+    color: var(--color4) !important;
+    border-color: #1ca498 !important;
+    
+}
+
+a.disabled{
+    background-color: var(--color3) !important;
+    color: var(--color1) !important;
+    border-style: none;
+    min-width: 90px; 
+    padding: 0px 0px 0px 0px; 
+    line-height: 4; 
+    letter-spacing: .8px;
+     border-radius: 0 !important;
+     font-size: 17px;
+     font-weight: bold;
+     text-shadow: 1px 1px 5px #000;
+    
+}
+
+.ghosttab {
+    position: fixed;
+    min-width: 90px; 
+    padding: 0px 0px 0px 0px; 
+    bottom: 0;
+    top:6.6vh;
+    background-image:linear-gradient(var(--color3), var(--color3), var(--color3), white);
+    z-index: -1000000000;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #1ca498;
+    
+}
+
+
+.shadowguide {
+    position: fixed;
+    min-width: 90px; 
+    padding: 0px 0px 0px 0px; 
+    bottom: 0;
+    right: 0;
+    top:0;
+    box-shadow: 10px 10px 40px black !important;
+}

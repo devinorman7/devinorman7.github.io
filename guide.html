@@ -43,7 +43,7 @@
     <script defer src="./js/script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
 
-    <title>Guides</title>
+    <title>FAQs</title>
 </head>
 
 <body>
@@ -58,25 +58,6 @@
         </div>
         <img src="/images/cursivelogo2.png" class="logo">
         <!-- logo for topbar -->
-        <!--
-        <div class="clicktocloseoverlay2 show">
-            <ul class="navbar-right" style="padding: 20px 0px 0px 0px; text-align: center;">
-                <li style=><a href="/guide.html">Getting<br>Started</a></li>
-                <br>
-                <li><a href="/generalcommands.html">General<br>Commands</a></li>
-                <br>
-                <li><a href="guide.html">Homes</a></li>
-                <li><a href="guide.html">Ranks</a></li>
-                <li><a href="guide.html">Crates</a></li>
-                <li><a href="guide.html">Land Claim</a></li>
-                <li><a href="guide.html">Skills</a></li>
-                <li><a href="guide.html">Parties</a></li>
-                <li><a href="guide.html">Trade</a></li>
-                <li><a href="guide.html">WayShines</a></li>
-                <li><a href="guide.html">Discord</a></li>
-                <li><a href="guide.html">DynMap</a></li>
-               </ul>
-            </div> -->
     </div>
     <div id="swup">
         <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
@@ -131,7 +112,6 @@
                 document.getElementsByClassName("sidenav")[0].classList.remove("open");
                 document.getElementsByClassName("menubtn")[0].classList.remove("open");
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
-                document.getElementsByClassName("clicktocloseoverlay2")[0].classList.remove("show");
                 navIsOpen = 0;
             }
 
@@ -148,6 +128,11 @@
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
+        <script>
+            $(function () {
+              $('#myList a:last-child').tab('show')
+            })
+          </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -192,16 +177,158 @@ _______                               _____          _
             </div>
         </div> <!-- end of the topmenu links -->
         <main>
-            
             <div class="transition-fade" style="margin-top: 6.6vh;">
                 <div class="contentpage">
                     <h1 class="display-4">Guide</h1>
                     <hr style="background-color: var(--color3);">
-                    <div class="guidecontent">
-                    <p>Join FloCraft for the first time and find yourself in a cavern deep underground. Check out the FloCraft guides in your inventory. Walk through the cave to the Start Portal to begin your FloCraft Odyssey. The portal will send you to a random spot in the wild! From here, the world is yours to explore.
-                    </p>
+                    <div class="guide-container">
+                    <div class="row">
+                        <div>
+                            <div class="tab-content">
+                              <div class="tab-pane fade show active" id="gettingstarted" role="tabpanel">
+                                  <h3>Getting Started</h3>
+                                  Join FloCraft for the first time and find yourself in a cavern deep underground. Check out the FloCraft guides in your inventory. Walk through the cave to the Start Portal to begin your FloCraft Odyssey. The portal will send you to a random spot in the wild! From here, the world is yours to explore.
+                                </div>
+                              <div class="tab-pane fade" id="generalcommands" role="tabpanel" >
+                                <h3>General Commands</h3>
+                                Toggle PVP - /pvp on|off - red effects when pvp is on
+                                <br>
+                                Coordinates HUD - /coordinates toggle - toggles HUD
+                                <br>
+                                /getbook [name] (playe) - get server books
+                                <br>
+                                /mail [send/clear/read] [playerName] (message)] - sends or edits mail for target player
+                                <br>
+                                /msg [player] - sends private message
+                                <br>
+                                /ping (player) - shows players ping
+                                <br>
+                                /playtimetop - shows top players play time
+                                <br>
+                                /prewards - Check playtime rewards
+                                <br>
+                                /rankinfo (rank) - shows rank information
+                                <br> 
+                                /ranklist - shows all possible ranks
+                                <br>
+                                /reply [message] - reply to last player
+                                <br>
+                                /toggleshiftedit - toggles sign shift edit
+                                <br>
+                                /votes - check your own vote count
+                                <br>
+                                /votetop - check top vote list
+                                <br>
+                                /site
+                                <br>
+                                /hat
+                                
+                              </div>
+                              <div class="tab-pane fade" id="homes" role="tabpanel">
+                                <h3>Homes</h3>
+                                Homes are a way for players to teleport to a saved location through the use of beds. Place a bed and crouch right-click it the set your Home. To teleport, type /home in chat. 
+                              </div>
+                              <div class="tab-pane fade" id="ranks" role="tabpanel">
+                                <h3>Ranks</h3>
+                                FloCraft has ranks based on time played. 
+                                <br><br>
+                                Novice - New Players<br>
+                                Apprentice - 30 Minutes<br>
+                                Artisan - 1 Day<br>
+                                Expert - 1 Week<br>
+                                Master - 1 Month
+
+                              </div>
+                              <div class="tab-pane fade" id="keysandcrates" role="tabpanel">
+                                <h3>Keys & Crates</h3>
+                                Keys can be found randomly in crates<br><br>
+                                +1 adventure key every hour played<br>
+                                +1 vote key for each vote with /vote<br>
+                                +1 daily key every day with /daily
+                              </div>
+                              <div class="tab-pane fade" id="landclaim" role="tabpanel">
+                                <h3>Land Claim</h3>
+                                Land claim creates an unraidable area, free from grief and theft. Blocks can’t be broken and containers are locked. Doors, trapdoors, and fence gates are all locked. Button and lever use is locked. Pressure plates are not locked. 
+                                <br><br>
+                                Create a claim by typing /claim<br>
+                                Delete a claim with /abandonclaim <br>
+                                Allow players to build in your claim with /trust<br>
+                                Remove a players trust with /untrust
+                                <br><br>
+                                Claim Tool: Golden Shove
+                                (Insert picture)
+                                Use the golden shovel to select 2 points and make a claim
+                                Inspection Tool: Stick
+                                (Picture)
+                                Use a stick to get info about a claim.
+
+                                Players receive 100 claim blocks per hour played
+
+                              </div>
+                              <div class="tab-pane fade" id="skills" role="tabpanel">
+                                <h3>Skills</h3>
+                                Skills are a unique was to show your progress on the server. As you level up your skills, you gain attributes related to each skill. Some attributes are double drops, bleed, less fall damage, and more. 
+                                <br>
+                                <br>
+                                More info can be found by using /&lt;skill&gt;
+                                <br>
+                                <br>
+                                (https://mcmmo.org/wiki/Main_Page)
+
+                              </div>
+                              <div class="tab-pane fade" id="parties" role="tabpanel">
+                                <h3>Parties</h3>
+                                Parties
+                                Team up with your friends to gain benefits as you level up your party. Share experience, teleport to each other, and party chat are some of the features 
+                                <br><br>
+                                /party help - shows commands
+
+                              </div>
+                              <div class="tab-pane fade" id="trade" role="tabpanel">
+                                <h3>Trade</h3>
+                                Easily and safely trade with other players through the Trade GUI. 
+                                
+                                Use /trade for help 
+
+                                Request a trade with /trade (name)
+                                Accept a trade with /trade accept (name)
+
+                                Place your items on the left side of the inventory.
+                                You will see the other players inventory on the right.
+
+                                Click the red block to initiate the trade
+                                Click the block again to confirm the trade
+
+                              </div>
+                              <div class="tab-pane fade" id="wayshrine" role="tabpanel">
+                                <h3>WayShines</h3>
+                                (Insert pic of shrine)
+                                WayShrines are quartz monuments with a teleporter core. Step into the portal to visit other wayshrine around the world. 
+
+                              </div>
+                            </div>
+                          </div>
+                        <div>
+                            <div class="shadowguide">
+                    <div class="list-group tabs" id="myList" role="tablist">
+                        <a class="list-group-item list-group-item-action disabled" data-toggle="list" role="tab">Guides</a>
+                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#gettingstarted" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px;">Getting Started</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#generalcommands" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px;">General Commands</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#homes" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Homes</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#ranks" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Ranks</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#keysandcrates" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px;">Keys & Crates</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#landclaim" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; ">Land<br>Claim</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#skills" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Skills</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#parties" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Parties</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#trade" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Trade</a>
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#wayshrine" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">WayShrines</a>
+                        <div class="ghosttab" >&nbsp</div>
+                      </div>
+                    </div>
+                    </div>
                 </div>
-                </div>
+            </div>
+                      
                 </div>
                 <footer class="page-footer font-small">
                     <div class="text-center py-3 footer">
