@@ -166,8 +166,30 @@ margin-right: 150px;
     font-size: 30px;
 }
 
+.rulepdiv {
+    margin-top: 30px;
+}
+
 .rulediv {
-    background-color: var(--color2);
+    font-size: 20px;
+  border: 2px solid black;
+  padding: 8px 20px;
+  position: relative;
+  margin: 10px;
+}
+
+.rulepdiv .circle {
+    position: absolute;
+  top: -21px;
+  left: -21px;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: var(--color2);
+  text-align: center;
+  line-height: 2;
 }
 
 .staffimage {
@@ -281,3 +303,43 @@ a.disabled{
     top:0;
     box-shadow: 10px 10px 40px black !important;
 }
+
+/* List */
+.ruleul {
+    counter-reset: index;  
+    padding: 0;
+    max-width: 300px;
+  }
+  
+  /* List element */
+  .ruleul li {
+    counter-increment: index; 
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Element counter */
+  .ruleul li::before {
+    content: counters(index, ".", decimal-leading-zero);
+    font-size: 1.5rem;
+    text-align: right;
+    font-weight: bold;
+    min-width: 50px;
+    padding-right: 12px;
+    font-variant-numeric: tabular-nums;
+    align-self: flex-start;
+    background-image: linear-gradient(to bottom, var(--color2), var(--color3));
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+  /* Element separation */
+  .ruleul li + li {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
