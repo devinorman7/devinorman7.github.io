@@ -1,9 +1,8 @@
 {
     "name": "FloCraft",
-    "short_name": "Flo",
+    "short_name": "FloCraft",
     "lang": "en-US",
     "start_url": "flocraft.site/",
-    "scope": "flocraft.site/",
     "display": "standalone",
     "theme_color": "#20bbae",
     "icons": [
