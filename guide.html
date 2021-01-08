@@ -22,7 +22,7 @@
     <link rel="icon" type="image/png" sizes="192X192" href="/images/cursivelogo3.png">
     <link rel="apple-touch-icon" type="image/png" sizes="192X192" href="/images/cursivelogo3.png">
 
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -41,7 +41,8 @@
     <script defer src="https://unpkg.com/@swup/debug-plugin@1.0.3/dist/SwupDebugPlugin.min.js"></script>
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
     <script defer src="./js/script.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js">
+    </script>
 
     <title>Guide</title>
 </head>
@@ -130,9 +131,9 @@
         </script>
         <script>
             $(function () {
-              $('#myList a:last-child').tab('show')
+                $('#myList a:last-child').tab('show')
             })
-          </script>
+        </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -182,159 +183,214 @@ _______                               _____          _
                     <h1 class="display-4">Guide</h1>
                     <hr style="background-color: var(--color3);">
                     <div class="guide-container">
-                    <div class="row">
-                        <div>
-                            <div class="tab-content">
-                              <div class="tab-pane fade show active" id="gettingstarted" role="tabpanel">
-                                  <h3>Getting Started</h3>
-                                  Join FloCraft for the first time and find yourself in a cavern deep underground. Check out the FloCraft guides in your inventory. Walk through the cave to the Start Portal to begin your FloCraft Odyssey. The portal will send you to a random spot in the wild! From here, the world is yours to explore.
+                        <div class="row">
+                            <div>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="gettingstarted" role="tabpanel">
+                                        <h3>Getting Started</h3>
+                                        Join FloCraft for the first time and find yourself in a cavern deep underground.
+                                        Check out the FloCraft guides in your inventory. Walk through the cave to the
+                                        Start Portal to begin your FloCraft Odyssey. The portal will send you to a
+                                        random spot in the wild! From here, the world is yours to explore.
+                                    </div>
+                                    <div class="tab-pane fade" id="generalcommands" role="tabpanel">
+                                        <h3>General Commands</h3>
+                                        <p>This is a compiled list of general commands that may be useful when playing
+                                            on the FloCraft server.</p>
+
+                                        <h5>Toggle PvP</h5>
+                                        <pre>/pvp on|off</pre>
+                                        <p>Players' Nametag will appear red when
+                                        PvP is enabled.</p>
+
+                                        <h5>Coordinates HUD</h5>
+                                        <pre>/coordinates toggle</pre>
+                                        <p>Toggles HUD which includes XYZ coordinates, directionality, and time (actual time, not game time).</p>
+
+                                        <h5>Books</h5>
+                                        <pre>/getbook &lt;name&gt;</pre> 
+                                        <p>Learn more about the server in-game by retrieving the server books. Replace <em>&lt;name&gt;</em> with <strong>Commands</strong>, <strong>Info</strong>, <strong>MOTD</strong>, and <strong>Rules</strong>.</p>
+                                            
+                                        <h5>Mail</h5>
+                                            <pre>/mail [send/clear/read] [playerName] (message)]</pre>
+                                            <p>Use <strong>send</strong> accompanies with a player name to send a player mail. <strong>Clear</strong> deletes your inbox, and <strong>read</strong>allows you to read your mail.</p> 
+                                        
+                                        <h5>Message</h5>
+                                           <pre> /msg [player]</pre>
+                                           <p>Sends a private message to the player entered.</p>
+                                           
+                                        <h5>Ping</h5>
+                                           <pre>/ping (player)</pre>  
+                                            <p>Shows a targeted player's ping.</p>
+                                            
+                                        <h5>Top Players (By Play-Time)</h5>
+                                            <pre>/playtimetop</pre> 
+                                            <p>Shows a list of the top players ranked by total play time.</p>
+                                        
+                                        <h5>Play-Time Rewards</h5>
+                                            <pre>/prewards</pre>
+                                            <p>Check the remaining time left before you receive your next play-time reward.</p>
+                                        
+                                        <h5>Ranks</h5>
+                                            <pre>/rankinfo (rank) | &lt;player&gt;</pre>
+                                            <p> Shows information for each rank or view rank information for a player. </p>
+                                        
+                                            <pre>/ranklist</pre> 
+                                            <p>Shows all possible ranks.</p>
+                                            
+                                        <h5>Sign Shift-Edit</h5>
+                                            <pre>/cmi toggleshiftedit</pre>
+                                            <p>Toggle sign shift-edit on or off.</p>
+                                            
+                                        <h5>Just For Fun</h5>
+                                            <pre>/sit</pre>
+                                            <p>Use this command to have your player take a seat or get up from sitting.</p>
+                                            
+                                            <pre>/hat</pre>
+                                            <p>Use the item you currently have in hand as a hat!</p>
+
+                                    </div>
+                                    <div class="tab-pane fade" id="homes" role="tabpanel">
+                                        <h3>Homes</h3>
+                                        Homes are a way for players to teleport to a saved location through the use of
+                                        beds. Place a bed and crouch right-click it the set your Home. To teleport, type
+                                        /home in chat.
+                                    </div>
+                                    <div class="tab-pane fade" id="ranks" role="tabpanel">
+                                        <h3>Ranks</h3>
+                                        FloCraft has ranks based on time played.
+                                        <br><br>
+                                        Novice - New Players<br>
+                                        Apprentice - 30 Minutes<br>
+                                        Artisan - 1 Day<br>
+                                        Expert - 1 Week<br>
+                                        Master - 1 Month
+
+                                    </div>
+                                    <div class="tab-pane fade" id="keysandcrates" role="tabpanel">
+                                        <h3>Keys & Crates</h3>
+                                        Keys can be found randomly in crates<br><br>
+                                        +1 adventure key every hour played<br>
+                                        +1 vote key for each vote with /vote<br>
+                                        +1 daily key every day with /daily
+                                    </div>
+                                    <div class="tab-pane fade" id="landclaim" role="tabpanel">
+                                        <h3>Land Claim</h3>
+                                        Land claim creates an unraidable area, free from grief and theft. Blocks can’t
+                                        be broken and containers are locked. Doors, trapdoors, and fence gates are all
+                                        locked. Button and lever use is locked. Pressure plates are not locked.
+                                        <br><br>
+                                        Create a claim by typing /claim<br>
+                                        Delete a claim with /abandonclaim <br>
+                                        Allow players to build in your claim with /trust<br>
+                                        Remove a players trust with /untrust
+                                        <br><br>
+                                        Claim Tool: Golden Shove
+                                        (Insert picture)
+                                        Use the golden shovel to select 2 points and make a claim
+                                        Inspection Tool: Stick
+                                        (Picture)
+                                        Use a stick to get info about a claim.
+
+                                        Players receive 100 claim blocks per hour played
+
+                                    </div>
+                                    <div class="tab-pane fade" id="skills" role="tabpanel">
+                                        <h3>Skills</h3>
+                                        Skills are a unique was to show your progress on the server. As you level up
+                                        your skills, you gain attributes related to each skill. Some attributes are
+                                        double drops, bleed, less fall damage, and more.
+                                        <br>
+                                        <br>
+                                        More info can be found by using /&lt;skill&gt;
+                                        <br>
+                                        <br>
+                                        (https://mcmmo.org/wiki/Main_Page)
+
+                                    </div>
+                                    <div class="tab-pane fade" id="parties" role="tabpanel">
+                                        <h3>Parties</h3>
+                                        Parties
+                                        Team up with your friends to gain benefits as you level up your party. Share
+                                        experience, teleport to each other, and party chat are some of the features
+                                        <br><br>
+                                        /party help - shows commands
+
+                                    </div>
+                                    <div class="tab-pane fade" id="trade" role="tabpanel">
+                                        <h3>Trade</h3>
+                                        Easily and safely trade with other players through the Trade GUI.
+
+                                        Use /trade for help
+
+                                        Request a trade with /trade (name)
+                                        Accept a trade with /trade accept (name)
+
+                                        Place your items on the left side of the inventory.
+                                        You will see the other players inventory on the right.
+
+                                        Click the red block to initiate the trade
+                                        Click the block again to confirm the trade
+
+                                    </div>
+                                    <div class="tab-pane fade" id="wayshrine" role="tabpanel">
+                                        <h3>WayShines</h3>
+                                        (Insert pic of shrine)
+                                        WayShrines are quartz monuments with a teleporter core. Step into the portal to
+                                        visit other wayshrine around the world.
+
+                                    </div>
                                 </div>
-                              <div class="tab-pane fade" id="generalcommands" role="tabpanel" >
-                                <h3>General Commands</h3>
-                                Toggle PVP - /pvp on|off - red effects when pvp is on
-                                <br>
-                                Coordinates HUD - /coordinates toggle - toggles HUD
-                                <br>
-                                /getbook [name] (playe) - get server books
-                                <br>
-                                /mail [send/clear/read] [playerName] (message)] - sends or edits mail for target player
-                                <br>
-                                /msg [player] - sends private message
-                                <br>
-                                /ping (player) - shows players ping
-                                <br>
-                                /playtimetop - shows top players play time
-                                <br>
-                                /prewards - Check playtime rewards
-                                <br>
-                                /rankinfo (rank) - shows rank information
-                                <br> 
-                                /ranklist - shows all possible ranks
-                                <br>
-                                /reply [message] - reply to last player
-                                <br>
-                                /toggleshiftedit - toggles sign shift edit
-                                <br>
-                                /votes - check your own vote count
-                                <br>
-                                /votetop - check top vote list
-                                <br>
-                                /site
-                                <br>
-                                /hat
-                                
-                              </div>
-                              <div class="tab-pane fade" id="homes" role="tabpanel">
-                                <h3>Homes</h3>
-                                Homes are a way for players to teleport to a saved location through the use of beds. Place a bed and crouch right-click it the set your Home. To teleport, type /home in chat. 
-                              </div>
-                              <div class="tab-pane fade" id="ranks" role="tabpanel">
-                                <h3>Ranks</h3>
-                                FloCraft has ranks based on time played. 
-                                <br><br>
-                                Novice - New Players<br>
-                                Apprentice - 30 Minutes<br>
-                                Artisan - 1 Day<br>
-                                Expert - 1 Week<br>
-                                Master - 1 Month
-
-                              </div>
-                              <div class="tab-pane fade" id="keysandcrates" role="tabpanel">
-                                <h3>Keys & Crates</h3>
-                                Keys can be found randomly in crates<br><br>
-                                +1 adventure key every hour played<br>
-                                +1 vote key for each vote with /vote<br>
-                                +1 daily key every day with /daily
-                              </div>
-                              <div class="tab-pane fade" id="landclaim" role="tabpanel">
-                                <h3>Land Claim</h3>
-                                Land claim creates an unraidable area, free from grief and theft. Blocks can’t be broken and containers are locked. Doors, trapdoors, and fence gates are all locked. Button and lever use is locked. Pressure plates are not locked. 
-                                <br><br>
-                                Create a claim by typing /claim<br>
-                                Delete a claim with /abandonclaim <br>
-                                Allow players to build in your claim with /trust<br>
-                                Remove a players trust with /untrust
-                                <br><br>
-                                Claim Tool: Golden Shove
-                                (Insert picture)
-                                Use the golden shovel to select 2 points and make a claim
-                                Inspection Tool: Stick
-                                (Picture)
-                                Use a stick to get info about a claim.
-
-                                Players receive 100 claim blocks per hour played
-
-                              </div>
-                              <div class="tab-pane fade" id="skills" role="tabpanel">
-                                <h3>Skills</h3>
-                                Skills are a unique was to show your progress on the server. As you level up your skills, you gain attributes related to each skill. Some attributes are double drops, bleed, less fall damage, and more. 
-                                <br>
-                                <br>
-                                More info can be found by using /&lt;skill&gt;
-                                <br>
-                                <br>
-                                (https://mcmmo.org/wiki/Main_Page)
-
-                              </div>
-                              <div class="tab-pane fade" id="parties" role="tabpanel">
-                                <h3>Parties</h3>
-                                Parties
-                                Team up with your friends to gain benefits as you level up your party. Share experience, teleport to each other, and party chat are some of the features 
-                                <br><br>
-                                /party help - shows commands
-
-                              </div>
-                              <div class="tab-pane fade" id="trade" role="tabpanel">
-                                <h3>Trade</h3>
-                                Easily and safely trade with other players through the Trade GUI. 
-                                
-                                Use /trade for help 
-
-                                Request a trade with /trade (name)
-                                Accept a trade with /trade accept (name)
-
-                                Place your items on the left side of the inventory.
-                                You will see the other players inventory on the right.
-
-                                Click the red block to initiate the trade
-                                Click the block again to confirm the trade
-
-                              </div>
-                              <div class="tab-pane fade" id="wayshrine" role="tabpanel">
-                                <h3>WayShines</h3>
-                                (Insert pic of shrine)
-                                WayShrines are quartz monuments with a teleporter core. Step into the portal to visit other wayshrine around the world. 
-
-                              </div>
                             </div>
-                          </div>
-                        <div>
-                            <div class="shadowguide">
-                    <div class="list-group tabs" id="myList" role="tablist">
-                        <a class="list-group-item list-group-item-action disabled" data-toggle="list" role="tab">Guides</a>
-                        <a class="list-group-item list-group-item-action active" data-toggle="list" href="#gettingstarted" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px;">Getting Started</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#generalcommands" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px;">General Commands</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#homes" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Homes</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#ranks" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Ranks</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#keysandcrates" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px;">Keys & Crates</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#landclaim" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; ">Land<br>Claim</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#skills" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Skills</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#parties" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Parties</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#trade" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Trade</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#wayshrine" role="tab" style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">WayShrines</a>
-                        <div class="ghosttab" >&nbsp</div>
-                      </div>
+                            <div>
+                                <div class="shadowguide">
+                                    <div class="list-group tabs" id="myList" role="tablist">
+                                        <a class="list-group-item list-group-item-action disabled" data-toggle="list"
+                                            role="tab">Guides</a>
+                                        <a class="list-group-item list-group-item-action active" data-toggle="list"
+                                            href="#gettingstarted" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px;">Getting Started</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#generalcommands" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px;">General Commands</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#homes" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Homes</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#ranks" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Ranks</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#keysandcrates" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px;">Keys & Crates</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#landclaim" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; ">Land<br>Claim</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#skills" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Skills</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#parties" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Parties</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#trade" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Trade</a>
+                                        <a class="list-group-item list-group-item-action" data-toggle="list"
+                                            href="#wayshrine" role="tab"
+                                            style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">WayShrines</a>
+                                        <div class="ghosttab">&nbsp</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-            </div>
-                      
+
                 </div>
                 <footer class="page-footer font-small">
                     <div class="text-center py-3 footer">
-                    <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin Orman</a></p>
+                        <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business"
+                                id="footerlink">Devin Orman</a></p>
                     </div>
-                </footer>   
+                </footer>
             </div>
         </main>
 </body>

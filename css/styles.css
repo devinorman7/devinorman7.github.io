@@ -343,3 +343,16 @@ a.disabled{
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
 
+pre {
+    background-color: #f2f2f2;
+    color: var(--color2);
+    border-style: solid;
+    border-width: 2px;
+    border-color:  #bfbfbf;
+    padding: 7px;
+    font-weight: bold;
+    margin:0px 0px 5px 0px;
+}
+.commanddiv{
+
+}
