@@ -1,6 +1,6 @@
 #logo-container img {
     width: 100%;
-    height: 65vh;
+    height: 65.5vh;
     object-fit: cover;
 
 }
@@ -25,7 +25,7 @@
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: black;
-    height: 29vh;
+    height: 28vh;
     position: relative;
     
     
@@ -35,7 +35,6 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
     text-align: center;
-    line-height: 22.4vh;
     margin: 0;
   position: absolute;
   top: 50%;
