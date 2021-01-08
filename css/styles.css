@@ -84,7 +84,7 @@
 }
 
 .contentpage {
-    margin: 6.6vh 30px 30px 30px;
+    margin: 6.6vh 0px 30px 30px;
     padding-top: 30px;
 }
 @keyframes fadeInUp {
@@ -348,34 +348,10 @@ pre {
     border-color:  #bfbfbf;
     padding: 7px;
     font-weight: bold;
-    margin:0px 90px 5px 0px;
-    max-width: 400px;
+    margin:0px 0px 5px 0px;
 }
-
 
 .guide-container {
-    position: relative;
-    left: 0px;
-    margin-left: 0;
-    padding-left: 0;
-    right:200px;
-    padding-right: 200px;
-}
-
-.guide-container p {
-    position: relative;
-    left: 0px;
-    margin-left: 0;
-    padding-left: 0;
-    right:200px;
-    padding-right: 200px;
-}
-
-.guide-container pre {
-    position: relative;
-    left: 0px;
-    margin-left: 0;
-    padding-left: 0;
-    right:200px;
-    padding-right: 200px;
+   margin-left: 30px;
+   margin-right: 100px; 
 }
