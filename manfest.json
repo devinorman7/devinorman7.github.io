@@ -3,7 +3,7 @@
     "short_name": "FloCraft",
     "lang": "en-US",
     "start_url": "flocraft.site/",
-    "display": "standalone",
+    "display": "fullscreen",
     "theme_color": "#20bbae",
     "icons": [
       {
