@@ -94,7 +94,7 @@ html.is-animating {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 52px;
+    height: 5.6vh;
     z-index: 1004;
     background-color: var(--color3);
     box-shadow: 0px 0px 20px var(--color5);
