@@ -231,8 +231,9 @@ margin-right: 150px;
 }
 
 .guide-container {
+    position: relative;
     margin-left: 15px;
-    margin-right: 90px;
+    padding-right: 90px;
 }
 
 .tabs {
