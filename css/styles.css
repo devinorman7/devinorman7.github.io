@@ -87,6 +87,11 @@
     margin: 6.6vh 0px 30px 30px;
     padding-top: 30px;
 }
+
+.contentpagefaq {
+    margin: 6.6vh 30px 30px 30px;
+    padding-top: 30px;
+}
 @keyframes fadeInUp {
     from {
         transform: translate3d(0,40px,0)
@@ -223,10 +228,7 @@ ul.navbar-right {
       width:100%; 
       height:87vh;
        border:none;
-        margin:0; 
-        padding:0; 
         overflow:hidden; 
-        
 }
 
 
@@ -251,13 +253,14 @@ ul.navbar-right {
 
 .tabs a:hover{
     margin-right: 5px;
-    background-color: #178078;
+    background-color: var(--color6);
     color: var(--color1);
 }
 
+
 a.active{
-    background-color: var(--color1) !important;
-    color: var(--color4) !important;
+    background-color: #3a938c !important;
+    color: var(--color1) !important;
     border-color: #1ca498 !important;
     
 }
@@ -392,7 +395,30 @@ pre {
   details[open] summary ~ * {
     animation: sweep .5s ease-in-out;
   }
+
+  details[close] summary ~ * {
+    animation: sweepout .5s ease-out;
+  }
+
   @keyframes sweep {
     0%    {opacity: 0; margin-top: -10px}
     100%  {opacity: 1; margin-top: 0px}
+  }
+
+  @keyframes sweepout {
+    0%    {opacity: 1; margin-top: -10px}
+    100%  {opacity: 0; margin-top: 0px}
+  }
+
+  .faq__content {
+      margin-left: 30px;
+  }
+
+  .bior {
+    list-style-image: url('/images/mc-diamond.png');
+  }
+
+  .guidelogo {
+      max-width: 70px;
+      padding: 14px 5px 14px 5px;
   }
