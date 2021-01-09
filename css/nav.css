@@ -98,6 +98,7 @@ html.is-animating {
     z-index: 1004;
     background-color: var(--color3);
     box-shadow: 0px 0px 20px var(--color5);
+    padding-top: 50px; /* fill out status bar */
 }
 
 .topbar .logo { /*Logo position in topbar*/
@@ -118,7 +119,7 @@ html.is-animating {
     position: relative;
     float:right;
     right: 20px;
-    top: 1vh;
+    top: -4vh; /* was 1vh */
     bottom: 1vh;
 }
 
