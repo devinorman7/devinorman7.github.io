@@ -11,6 +11,11 @@
         "src": "/images/cursivelogo3.png",
         "sizes": "192X192",
         "type": "image/png"
+      },
+      {
+        "src": "/images/cursivelogo2.png",
+        "sizes": "512X512",
+        "type": "image/png"
       }
     ],
     "background_color": "#20bbae"
