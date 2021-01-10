@@ -226,14 +226,10 @@ ul.navbar-right {
      left:0; 
      right:0;
       width:100%; 
-      height:86vh;
+      height:85.1vh;
        border:none;
         overflow:hidden; 
 }
-
-
-
-
 
 .tabs {
     position: fixed;
