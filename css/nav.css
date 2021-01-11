@@ -266,7 +266,7 @@ html.is-animating .toplinks div { /*swup animation when link is clicked*/
              |___/                          |___/
 */
 body {/*body styling*/
-    background: linear-gradient(to bottom, var(--color3) 0%,var(--color3) 50%,black 50%,black 100%);
+    background-color:  #20bbae; /*if not set default to off-white*/
     margin: 0px;
 }
 
@@ -428,6 +428,8 @@ footer {
     border-top: 1px solid var(--color1);
     flex-shrink: 0;
     color: var(--color1);
+    position: relative;
+    bottom: 0;
 }
 footer .copyright {
     position: absolute;
