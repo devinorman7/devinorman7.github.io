@@ -180,19 +180,6 @@ ul.navbar-right {
   margin: 10px;
 }
 
-.rulepdiv .circle {
-    position: absolute;
-  top: -21px;
-  left: -21px;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-  background: var(--color2);
-  text-align: center;
-  line-height: 2;
-}
 
 .staffimage {
     display: block;
@@ -433,12 +420,16 @@ pre {
     .guideimages {
         width: 100%;
         min-width: 100%;
-        
         margin-left: 0  !important;
         padding-right: 90px;
         right: 0 !important;
         height: auto;
         object-fit: cover;
+        border-width: 5px 0px 5px 0px;
+        border-color: var(--color2);
+        border-style: solid;
+        padding: -5px !important;
+        background-color: var(--color2);
     }
   }
 
