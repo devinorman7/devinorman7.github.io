@@ -168,18 +168,6 @@ ul.navbar-right {
     font-size: 30px;
 }
 
-.rulepdiv {
-    margin-top: 30px;
-}
-
-.rulediv {
-    font-size: 20px;
-  border: 2px solid black;
-  padding: 8px 20px;
-  position: relative;
-  margin: 10px;
-}
-
 
 .staffimage {
     display: block;
@@ -326,6 +314,42 @@ a.disabled{
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
 
+  @media only screen and (min-width: 800px) {
+    .ruleul {
+      counter-reset: index;  
+      padding: 0;
+      max-width: 100%;
+    }
+    
+    /* List element */
+    .ruleul li {
+      counter-increment: index; 
+      display: flex;
+      align-items: center;
+      padding: 12px 0;
+      box-sizing: border-box;
+      font-size: 40px;
+    }
+    
+    
+    /* Element counter */
+    .ruleul li::before {
+      content: counters(index, ".", decimal-leading-zero);
+      font-size: 5rem;
+      text-align: left;
+      font-weight: bold;
+      min-width: 50px;
+      padding-right: 50px;
+      font-variant-numeric: tabular-nums;
+      align-self: flex-start;
+      background-image: linear-gradient(to bottom, var(--color2), var(--color3));
+      background-attachment: fixed;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+  }
+
 pre {
     background-color: #f2f2f2;
     color: var(--color2);
@@ -411,12 +435,11 @@ pre {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 90px;
     overflow: hidden;
-     
+    
   }
 
- @media only screen and (max-width: 1000px) {
+ @media only screen and (max-width: 1200px) {
     .guideimages {
         width: 100%;
         min-width: 100%;
@@ -430,6 +453,7 @@ pre {
         border-style: solid;
         padding: -5px !important;
         background-color: var(--color2);
+        box-shadow: 0px 0px 20px var(--color5);
     }
   }
 
@@ -437,5 +461,18 @@ pre {
     height: 100%;
     margin-top: 300px;
     position: absolute;
-    
+   
+  }
+
+  .commandhl {
+    background-color: #f2f2f2;
+    color: var(--color2);
+    border-style: solid;
+    border-width: 2px;
+    border-color:  #bfbfbf;
+    padding: 1px 3px 1px 3px;
+    font-weight: bold;
+    margin:0px 0px 0px 0px;
+    font-family:monospace;
+
   }
