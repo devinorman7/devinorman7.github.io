@@ -266,7 +266,7 @@ html.is-animating .toplinks div { /*swup animation when link is clicked*/
              |___/                          |___/
 */
 body {/*body styling*/
-    background-color:  #20bbae; /*if not set default to off-white*/
+    background: linear-gradient(to bottom, var(--color3) 0%,var(--color3) 50%,black 50%,black 100%);
     margin: 0px;
 }
 
