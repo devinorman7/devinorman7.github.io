@@ -443,6 +443,12 @@ pre {
     
   }
 
+  .skur li{
+    
+    list-style-image: url('/images/guidephotos/dpickaxeicon.png');
+    
+  }
+
 .mcitemlist {
   list-style: none;
   

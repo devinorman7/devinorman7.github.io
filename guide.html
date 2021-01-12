@@ -523,44 +523,95 @@ _______                               _____          _
                                 <div class="tab-pane fade" id="skills" role="tabpanel">
                                     <div class="guide-container">
                                     <h3>Skills</h3>
-                                    Skills are a unique was to show your progress on the server. As you level up
-                                    your skills, you gain attributes related to each skill. As you level up a skill, the more powerful in that skill you will become.
-                                    <br>
-                                    <br>
-                                    More info can be found by using <span class="commandhl">/&lt;skill&gt;</span>
-                                    <br>
-                                    <br>
-                                    <a href="https://mcmmo.org/wiki/Main_Page" targer="_blank"><p>MCMMO Wiki</p></a>
-                                </div>
+                                    <p>Skills are a unique was to show your progress on the server. As you level up your skills, you gain attributes related to each skill. Your combined skill level is displayed next to your nameplate and is known as your Power Level. Read more on the <a href="https://mcmmo.org/wiki/Main_Page" targer="_blank">MCMMO Wiki</a>.</p>
+                                    <ul class="skur">
+                                        <li>Power Level is your total combined skill level</li>
+                                        <li>More info can be found by using <span class="commandhl">&lt;skill&gt;</span></li>
+                                        <li>Max level is 1000 in each skill.</li>
 
+                                    </ul>
+                                    <h5>Commands</h5>
+                                        <pre>/mcmmo [commands]</pre>
+                                        <p>Shows a brief mod description and the available commands.</p>
+
+                                        <pre>/inspect (player)</pre>
+                                        <p>Shows detailed mcmmo stats (like /mcstats) of another player. Requires you to be within a configurable range of the player unless you have the admin permission.
+                                            <br><strong>Permissions:</strong> mcmmo.commands.inspect, mcmmo.commands.inspect.far</p>
+
+                                        <pre>/mctop</pre>
+                                            <p>Shows the top ten players on the server with the highest power level.</p>
+
+                                        <pre>/mcrank [username]</pre>
+                                        <p>Shows how high the player is ranked in each skill. It default to the username of the user who runs the command but it's possible to look at other players stats by adding a username to the command.</p>
+
+                                        <pre>/mcability</pre>
+                                        <p>Toggles whether or not abilities get readied on right click.</p>
+                                        <p class="text-muted py-3">Command info from <a href="https://mcmmo.org/wiki/Commands">McMMO Wiki</a></p>
+                                        
+                                 </div>
+                                 <img src="images/guidephotos/mcmmostats.png" class="guideimages">
+                                 <br>
+                                 <img src="images/guidephotos/mctop.png" class="guideimages">
+                                 <br>
                                 </div>
                                 <div class="tab-pane fade" id="parties" role="tabpanel">
                                     <div class="guide-container">
                                     <h3>Parties</h3>
                                     
+                                   
                                     <p>Team up with your friends to gain benefits as you level up your party. Share
                                     experience, teleport to each other, and party chat!</p>
-                                    
-                                    <p><span class="commandhl">/party help</span> - shows commands</p>
+                                    <h5>Commands</h5>
+                                    <pre>/party help</pre>
+                                    <p>Shows commands for parties</p>
+                                    <pre>/ptp &lt;playername&gt;</pre>
+                                    <p>With the ptp command, you can teleport to your party members.</p>
+                                    <pre>/party [parameters]</pre>
+                                    <p>Check party information.</p>
+                                    <p><strong>Parameters:</strong></p>
+                                    <ul class="lcur">
+                                        <li><strong>create &lt;party-name&gt; &lt;password&gt;</strong>: Create a party</li>
+                                        <li><strong>join &lt;player&gt; &lt;password&gt;</strong>: Join a player's party</li>
+                                        <li><strong>invite &lt;player&gt;</strong>: Invite a player to join your party</li>
+                                        <li><strong>accept &lt;player&gt;</strong>: Accept a party invite</li>
+                                        <li><strong>password &lt;password&gt;</strong>: Set a password for the party you currently own</li>
+                                        <li><strong>kick &lt;player-name&gt;</strong>: Kick a player from the party</li>
+                                        <li><strong>owner &lt;player-name&gt;</strong>: Set a player as the party owner</li>
+                                        <li><strong>expshare [none/equal]</strong>: Set the party share mode</li>
+                                        <li><strong>lock</strong>: Lock the party</li>
+                                        <li><strong>unlock</strong>: Unlock the party</li>
+                                        <li><strong>q</strong>: Quit the party you're currently in</li>
+                                        <li><strong>?</strong>: More information about parties</li>
+                                    </ul>
+                                    <pre>partychat [message]</pre>
+                                    <p>With this command, you can chat with your fellow party members in a private channel. Only your party members can view these messages.</p>
+                                    <br>
+                                    <p class="text-muted py-3">Command info from <a href="https://mcmmo.org/wiki/Commands">McMMO Wiki</a></p>
+                                    <br>
                                 </div>
                                 </div>
                                 <div class="tab-pane fade" id="trade" role="tabpanel">
                                     <div class="guide-container">
                                     <h3>Trade</h3>
                                     
-                                    <p>Easily and safely trade with other players through the Trade GUI.</p>
-
-                                    <p>Use <span class="commandhl">/trade</span> for help</p>
-
-                                    <p>Request a trade with <span class="commandhl">/trade (name)</span></p>
-                                    <p>Accept a trade with <span class="commandhl">/trade accept (name)</span></p>
-
-                                   <p> Place your items on the left side of the inventory.
-                                    You will see the other players inventory on the right.</p>
-
-                                    <p>Click the red block to initiate the trade. 
-                                    Click the block again to confirm the trade.</p>
+            
+                                    <p>Easily and safely trade with other players through the Trade GUI. Commands are listed below. In the GUI, click the red block to initiate the trade. The block will appear yellow, click it again to make it green to signify that you accept the trade. Both players must accept for the trade to successfully execute.</p>
+                                    </div>
+                                    <br>
+                                    <img src="images/guidephotos/tradegui.png" class="guideimages">
+                                    <br>
+                                    <div class="guide-container">
+                                    <h5>Commands</h5>
+                                    <pre>/trade &lt;player&gt;</pre>
+                                    <p>This commands sends a trade request to the player of your choice</p>
+                                    <pre>/trade accept &lt;player&gt;</pre>
+                                    <p>Accept a trade request</p>
+                                    <pre>/trade deny &lt;player&gt;</pre>
+                                    <p>Deny a trade request</p>
+                                    <pre>/trade cancel</pre>
+                                    <p>Cancels a trade request that you have sent</p>
                                 </div>
+                                <br>
                                 </div>
                                 <div class="tab-pane fade" id="wayshrine" role="tabpanel">
                                     <div class="guide-container">
