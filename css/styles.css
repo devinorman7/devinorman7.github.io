@@ -437,12 +437,18 @@ pre {
     list-style-image: url('/images/mc-diamond.png');
   }
 
-.cratelist {
+  .lcur li{
+    
+    list-style-image: url('/images/guidephotos/creepicongradient.png');
+    
+  }
+
+.mcitemlist {
   list-style: none;
   
 }
 
-  .cratelist img{
+  .mcitemlist img{
     display: inline-block;
     width: 40px;
     
