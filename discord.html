@@ -17,11 +17,10 @@
     <meta name="msapplication-navbutton-color" content="#20bbae">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="msapplication-starturl" content="flocraft.site/">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="icon" type="image/png" sizes="192X192" href="/images/cursivelogo3.png">
     <link rel="apple-touch-icon" type="image/png" sizes="192X192" href="/images/cursivelogo3.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/images/cursivelogo2.png">
 
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -36,15 +35,19 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
     </body>
+   
     <link href="./css/nav.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+    
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script defer src="https://unpkg.com/@swup/debug-plugin@1.0.3/dist/SwupDebugPlugin.min.js"></script>
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
     <script defer src="./js/script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+   <!-- <style>body {background-color: white;}</style>-->
+    <title>FAQs</title>
 
-    <title>Welome to FloCraft!</title>
 </head>
 
 <body>
@@ -64,7 +67,7 @@
         <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
         <div class="sidenav">
             <!-- Links for side menu bar -->
-            <div class="transition-current">
+            <div>
                 <a href="/index.html" onclick="navClose()">Home</a>
             </div>
             <div>
@@ -73,11 +76,11 @@
             <div>
                 <a href="/rules.html" onclick="navClose()">Rules</a>
             </div>
-            <div>
+            <div >
                 <a href="/guide.html" onclick="navClose()">Guide</a>
             </div>
             <div>
-                <a href="/discord.html" onclick="navClose()">Discord</a>
+                <a href=" https://discord.gg/HaJAMeU" onclick="navClose()">Discord</a>
             </div>
             <div>
                 <a href="/vote.html" onclick="navClose()">Vote</a>
@@ -85,7 +88,7 @@
             <div>
                 <a href="/livemap.html" onclick="navClose()">Live Map</a>
             </div>
-            <div>
+            <div class="transition-current">
                 <a href="/faqs.html" onclick="navClose()">FAQs</a>
             </div>
         </div> <!-- end of the sidemenu links -->
@@ -146,7 +149,7 @@ _______                               _____          _
             <!--Links for top menu bar-->
             <a href="/"><img src="/images/cursivelogo2.png" class="logo"></a>
             <div class="toplinks">
-                <div class="transition-current">
+                <div>
                     <a href="/index.html">Home</a>
                 </div>
                 <div>
@@ -159,7 +162,7 @@ _______                               _____          _
                     <a href="/guide.html">Guide</a>
                 </div>
                 <div>
-                    <a href="/discord.html">Discord</a>
+                    <a href="https://discord.gg/HaJAMeU">Discord</a>
                 </div>
                 <div>
                     <a href="/vote.html">Vote</a>
@@ -167,42 +170,16 @@ _______                               _____          _
                 <div>
                     <a href="/livemap.html">Live Map</a>
                 </div>
-                <div>
+                <div class="transition-current">
                     <a href="/faqs.html">FAQs</a>
                 </div>
             </div>
         </div> <!-- end of the topmenu links -->
         <main>
-            <div class="transition-fade" style="margin-top: 6.6vh;">
-
-                <div id="logo-container"><img src="images/map4.jpg"/></div>
-                <div class="headercontent animated animatedFadeInUp fadeInUp">
-                   <div id="flocraft-text-container"><img src="images/floheader.png"/></div>
-                </div>
-                <div class="serverinformationbg">
-                    <div class="serverinformation">
-                    <h4 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Play now at</h4>
-                    <h1 style="text-shadow: 3px 4px 5px #000;">flocraft.online</h1>
-                    <center>
-                        <hr style="background-color: white;" id="smallhr">
-                    </center>
-                    <h5><span data-playercounter-ip="flocraft.online">0</span>/50 players currently playing!</h5>
-                    </div>
-                </div>
-                
-                <div class="homebody">
-                    <div class="jumbotron">
-                        <h1 class="display-4">Welcome to FloCraft!</h1>
-                        <p class="lead">FloCraft is a Survival Server with skills, land-claims, rankings, roles, special
-                            events, and much more!</p>
-                        <hr style="background-color: black" ;>
-                        <p>We have taken the time to provide all of the instructional content you need to play and
-                            succeed on FloCraft. Click below to see our guides!</p>
-                        <p class="lead">
-                            <a class="btn guidebutton btn-lg" href="/guide.html" role="button">Guides</a>
-                        </p>
-                    </div>
-                </div>
+            
+            <iframe src="https://e.widgetbot.io/channels/754031113474932799/754167248662298625" height="600" width="100%" style="margin-top: 6.6vh;"></iframe>
+             
+               </div>
                 <footer class="page-footer font-small">
                     <div class="text-center py-3 footer">
                     <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin Orman</a></p>
@@ -210,6 +187,7 @@ _______                               _____          _
                 </footer>   
             </div>
         </main>
+       
 </body>
 
 </html>
