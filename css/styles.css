@@ -577,3 +577,15 @@ pre {
    max-width: 40px;
    margin-right: 20px;
  }
+
+ .donateinstructions {
+  width: 50%; 
+  margin: auto; 
+ }
+
+ @media only screen and (max-width: 1200px) {
+  .donateinstructions {
+    width: 100%; 
+    margin: auto; 
+   }
+ }
