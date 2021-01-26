@@ -518,3 +518,20 @@ pre {
     font-family:monospace;
 
   }
+
+  .donate {
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    background-image: url(/images/gradientlightblue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 20px 0px 20px 0px;
+    box-shadow: 0px 0px 20px var(--color5);
+    margin-top: 75px;
+    font-weight: bold;
+  }
