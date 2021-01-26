@@ -539,7 +539,7 @@ pre {
   @media only screen and (max-width: 1200px) {
     .donate {
       width: 100%;
-      height: 200px;
+      height: auto;
       margin: auto;
       text-align: center;
       background-image: url(/images/gradientlightblue.jpg);
@@ -593,7 +593,7 @@ pre {
   
   .progress-bg h3.goal, .progress-bg h3.raised {
     font-family: Arial,sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 600;
     line-height: 78px;
     margin: 0;
