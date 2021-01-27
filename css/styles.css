@@ -589,3 +589,13 @@ pre {
     margin: auto; 
    }
  }
+
+ .customlist {
+  font-weight: bold;
+  color: var(--color5);
+  border-radius: 30px;
+  background-color: var(--color2);
+  padding: 0px 6px 1px 6px;
+  line-height: 2;
+ }
+

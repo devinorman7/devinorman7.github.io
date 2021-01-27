@@ -36,6 +36,7 @@
     </body>
     <link href="./css/nav.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/accordion.css" rel="stylesheet">
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script defer src="https://unpkg.com/@swup/debug-plugin@1.0.3/dist/SwupDebugPlugin.min.js"></script>
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
@@ -47,48 +48,8 @@
     <meta name="google-site-verification" content="bnoSkAsme7-G1S98FKeD7E4KMWAUDBbgS5vELjYTnvw" />
     <style>
 
-        input {
-            display: none;
-        }
-        
-        label {
-            display: block;    
-            padding: 8px 22px;
-            margin: 0 0 1px 0;
-            cursor: pointer;
-            background: var(--color3);
-            border-radius: 3px;
-            color: #FFF;
-            transition: ease .5s;
-        }
-        
-        label:hover {
-            background: #4E8774;
-        }
-        
-        .content {
-            background: #E2E5F6;
-            padding: 10px 25px;
-            border: 1px solid #A7A7A7;
-            margin: 0 0 1px 0;
-            border-radius: 3px;
-        }
-        
-        input + label + .content {
-            opacity: 0;
-            height: 0;
-            font-size: 0;
-            padding: 0 25px;
-            transition: ease .5s;
-        }
-        
-        input:checked + label + .content {
-            opacity: 1;
-            height: auto;
-            font-size: 14px;
-            padding: 10px 5px;
-        }
-        
+
+
         </style>
 </head>
 
@@ -265,45 +226,52 @@ _______                               _____          _
                 
                 <center><p><strong>Complete the following steps to get your new rank:</strong></p></center>
 
-                    <div class="donateinstructions">
-
-                <input type="checkbox" id="title1" />
-                <label for="title1"><h5>For Card and PayPal Payments</h5></label>
-                
-                <div class="content">
-                    <ol>
+                <div class="accordion donateinstructions">        
+<ul>
+  <li>
+      
+    <input type="checkbox" checked>
+    <i></i>
+    <h2>For Card and PayPal Payments</h2>
+    <p> 
                    
-                        <li>Submit a donation of $10 or more</li>
-                        <li>Send an email to <a href="mailto:flocrafters@gmail.com" id="footerlink">flocrafters@gmail.com</a> including:</li>
-                       
-                        <ul>
-                        <li>A screenshot of proof for your donation</li>
-                        <li>MC username</li>
-                        <li>Platform (Java or Bedrock)</li>
-                        <li>New Rank Name</li>
-                        <li>Rank color</li>
-                    </ol>
-                    </ol>
-                </div>
+        <span class="customlist">1</span> Submit a donation of $10 or more<br>
+        <span class="customlist">2</span> Send an email to <a href="mailto:flocrafters@gmail.com" id="footerlink">flocrafters@gmail.com</a> including:</p>
+       <p style="margin-left: 20px;">
+        
+        A screenshot of proof for your donation<br>
+        MC username<br>
+        Platform (Java or Bedrock)<br>
+        New Rank Name<br>
+        Rank color<br>
+    </p>
+  </li>
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <h2>For CashApp and Venmo Payment</h2>
+    <p>
+        
                 
-                <input type="checkbox" id="title2" />
-                <label for="title2"><h5>For CashApp and Venmo Payments</h5></label>
-                
-                <div class="content">
-                    <ol>
-                
-                        <li>Enter a donation amount of $10 or more</li>
-                        <li>Before submitting, enter a payment note including:</li>
-                       
-                        <ul>
-                        <li>MC username</li>
-                        <li>Platform (Java or Bedrock)</li>
-                        <li>New Rank Name</li>
-                        <li>Rank color</li>
-                    </ul>
-                    <li>Submit</li>
-                    </ul>
-                </div>
+        <span class="customlist">1</span> Enter a donation amount of $10 or more<br>
+            <span class="customlist">2</span> Before submitting, enter a payment note including:</p>
+           
+            <p style="margin-left: 20px;">
+            MC username<br>
+            Platform (Java or Bedrock)<br>
+            New Rank Name<br>
+            Rank color<br>
+        </p>
+        <p>
+            <span class="customlist">3</span> Submit
+    </p>
+   
+  </li>
+
+</ul>
+
+               
+
                 
             </div>
                 
