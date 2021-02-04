@@ -144,6 +144,7 @@ html.is-animating {
     position: fixed;
     z-index: 1003;
     top: 6.6vh;
+  
     right: 320px;
     background-color: var(--color3);
     overflow-x: hidden;
@@ -162,6 +163,11 @@ html.is-animating {
     white-space: nowrap;
     opacity: 1;
     border-left: 3px solid var(--color3)
+}
+
+.sidenav .homelink{
+    height: 50px; 
+    line-height: 2.1;
 }
 
 .sidenav a:hover { /*change link style on hover*/
@@ -206,11 +212,11 @@ html.is-animating .sidenav a { /*swup animation when a link is clicked*/
 
 .topnav .logo { /*position the logo at the top of the sidenav*/
     position: absolute;
-    padding: 4px 20px;
-    left: 0px; top: 0px;
-    height: 52px;
+    display: block;
+    left: 20px; 
+   /* top: 45%; */
+    height: 5vh;
     filter: drop-shadow(0 0 10px var(--color5));
-    margin-top: 5px;
 }
 
 .toplinks { /*container with top links inside it*/
