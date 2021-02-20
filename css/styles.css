@@ -170,11 +170,11 @@ ul.navbar-right {
 
 
 .staffimage {
-    display: block;
+    
     margin-left: auto;
     margin-right: auto;
-    width: 250px;
-    padding: 20px 50px 20px 50px;
+    width: 200px;
+    padding: 20px 20px 20px 20px;
     margin-top: 20px;
     background-image: url(/images/netherportal.jpg);
     backdrop-filter: blur(5px);
