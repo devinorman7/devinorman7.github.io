@@ -497,6 +497,11 @@ pre {
         box-shadow: 0px 0px 20px var(--color5);
         border-radius: 0px;
     }
+
+    .contentpage {
+      margin: 6.6vh 0px 30px 0px;
+      padding-top: 30px;
+  }
   }
 
   .guidetext {
