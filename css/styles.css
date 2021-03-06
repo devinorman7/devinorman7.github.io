@@ -601,3 +601,7 @@ pre {
   line-height: 2;
  }
 
+.voteframes {
+width: 100%;
+min-height: 540px;
+}
