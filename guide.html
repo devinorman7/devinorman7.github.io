@@ -139,6 +139,17 @@
                 $('#myList a:last-child').tab('show')
             })
         </script>
+        <script>
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+        </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -700,34 +711,34 @@ _______                               _____          _
                                             src="/images/enchantedbookgif.gif" class="guidelogo" alt="minecraft enchanted book"></a>
                                     <a class="list-group-item list-group-item-action active" data-toggle="list"
                                         href="#gettingstarted" role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px;">Getting Started</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px;" onclick="topFunction()" id="myBtn">Getting Started</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list"
                                         href="#generalcommands" role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px;">General Commands</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px;" onclick="topFunction()" id="myBtn">General Commands</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#homes"
                                         role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Homes</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;" onclick="topFunction()" id="myBtn">Homes</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#ranks"
                                         role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Ranks</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;" onclick="topFunction()" id="myBtn">Ranks</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list"
                                         href="#keysandcrates" role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px;  line-height: 2.5;">Casino</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px;  line-height: 2.5;" onclick="topFunction()" id="myBtn">Casino</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list"
                                         href="#landclaim" role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; ">Land<br>Claim</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; " onclick="topFunction()" id="myBtn">Land<br>Claim</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#skills"
                                         role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Skills</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;" onclick="topFunction()" id="myBtn">Skills</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#parties"
                                         role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Parties</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;" onclick="topFunction()" id="myBtn">Parties</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list" href="#trade"
                                         role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">Trade</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;" onclick="topFunction()" id="myBtn">Trade</a>
                                     <a class="list-group-item list-group-item-action" data-toggle="list"
                                         href="#wayshrine" role="tab"
-                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;">WayShrines</a>
+                                        style="min-width: 90px; padding: 0px 0px 0px 0px; line-height: 2.5;" onclick="topFunction()" id="myBtn">WayShrines</a>
                                     <div class="ghosttab">&nbsp</div>
                                 </div>
                             </div>
