@@ -46,63 +46,6 @@
     
     <title>Live Map</title>
     <meta name="google-site-verification" content="bnoSkAsme7-G1S98FKeD7E4KMWAUDBbgS5vELjYTnvw" />
-    <style>
-        body {
-     background: #000;
-}
-/* .izle {
-     border:1px solid red;
-}*/
- .hareket {
-     color: #5dea62;
-     font-family: Monaco, monospace;
-     font-size: 24px;
-     width: 100%;
-     text-align: left;
-     animation: 120ms infinite normal glitch;
-}
- span {
-     animation: 1.5s infinite normal imlec;
-}
- ::-moz-selection {
-     background: #7021d2;
-     color: #fff;
-}
- ::selection {
-     background: #7021d2;
-     color: #fff;
-}
- @keyframes glitch {
-     0% {
-         opacity: 0;
-         left: 0;
-    }
-     40%, 80% {
-         opacity: 1;
-         left: -2px;
-    }
-}
- @keyframes imlec {
-     0% {
-         opacity: 0;
-         left: 0;
-    }
-     40% {
-         opacity: 0;
-         left: -2px;
-    }
-     80% {
-         opacity: 1;
-         left: -2px;
-    }
-}
- .bilmm {
-     display:inline-block;
-     position: absolute;
-     top: 45%;
-     left: calc(50% - 200px);
-}
-    </style>
 </head>
 
 <body>
@@ -238,17 +181,16 @@ _______                               _____          _
         <main>
 
             <div class="transition-fade" style="margin-top: 6.6vh;">
-                <div class="bilmm izle">
-                    <div class="hareket">█  <span style="color:red">█ █ █ █ █ █ █ █ █ █ █ █ </span>1%
-                        <br>
-                        <br>&gt; Delbow apologizes
-                        <br>&gt; Live Map is under maintenance
-                        <br> &gt; flocraft.site/livemap.html <span id="imlec">█</span>
-                    </div>
-                </div>  
+               <!-- <iframe src="" class="livemap"> -->
+                    <p>Your browser does not support iframes.</p>
+                  </iframe>                  
                 
 
-  
+                <footer class="page-footer font-small" style="height: 8.8vh;">
+                    <div class="text-center py-3 footer">
+                    <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin Orman</a></p>
+                    </div>
+                </footer> 
 
             </div>
         </main>
