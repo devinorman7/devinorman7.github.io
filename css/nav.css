@@ -765,7 +765,7 @@ body {
     color: #5dea62;
     font-family: Monaco, monospace;
     font-size: 20px;
-    width: 100%;
+    width: 100vw;
     text-align: left;
     animation: 120ms infinite normal glitch;
 }
