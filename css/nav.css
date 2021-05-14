@@ -757,6 +757,7 @@ footer .footersocial a img:hover {
 
 body {
     background: #000;
+    height: 91vh;
 }
 /* .izle {
     border:1px solid red;
@@ -764,10 +765,9 @@ body {
 .hareket {
     color: #5dea62;
     font-family: Monaco, monospace;
-    font-size: 20px;
-    width: 100vw;
+    font-size: 17px;
+    width: 100%;
     text-align: left;
-    margin-left: 20px;
     animation: 120ms infinite normal glitch;
 }
 span {
