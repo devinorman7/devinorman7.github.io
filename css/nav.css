@@ -767,6 +767,7 @@ body {
     font-size: 20px;
     width: 100vw;
     text-align: left;
+    margin-left: 20px;
     animation: 120ms infinite normal glitch;
 }
 span {
