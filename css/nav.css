@@ -764,7 +764,7 @@ body {
 .hareket {
     color: #5dea62;
     font-family: Monaco, monospace;
-    font-size: 24px;
+    font-size: 20px;
     width: 100%;
     text-align: left;
     animation: 120ms infinite normal glitch;
@@ -807,6 +807,6 @@ span {
 .bilmm {
     display:inline-block;
     position: absolute;
-    top: 45%;
+    top: 45vh;
     left: calc(50% - 200px);
 }
