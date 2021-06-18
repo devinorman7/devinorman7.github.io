@@ -134,6 +134,17 @@
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
+         <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            
+                    </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -152,31 +163,31 @@ _______                               _____          _
             <a href="/"><img src="/images/cursivelogo2.png" class="logo" alt="flocraft logo" alt="flocraft logo"></a>
             <div class="toplinks">
                 <div>
-                    <a href="/index.html">Home</a>
+                    <a onclick="topFunction()" href="/index.html">Home</a>
                 </div>
                 <div class="transition-current">
-                    <a href="/about.html">About</a>
+                    <a onclick="topFunction()" href="/about.html">About</a>
                 </div>
                 <div>
-                    <a href="/rules.html">Rules</a>
+                    <a onclick="topFunction()" href="/rules.html">Rules</a>
                 </div>
                 <div>
-                    <a href="/guide.html">Guide</a>
+                    <a onclick="topFunction()" href="/guide.html">Guide</a>
                 </div>
                 <div>
-                    <a href="https://discord.gg/HaJAMeU">Discord</a>
+                    <a onclick="topFunction()" href="https://discord.gg/HaJAMeU">Discord</a>
                 </div>
                 <div>
-                    <a href="/vote.html">Vote</a>
+                    <a onclick="topFunction()" href="/vote.html">Vote</a>
                 </div>
                 <div>
-                    <a href="/livemap.html">Live Map</a>
+                    <a onclick="topFunction()" href="/livemap.html">Live Map</a>
                 </div>
                 <div>
-                    <a href="/donate.html">Donate</a>
+                    <a onclick="topFunction()" href="/donate.html">Donate</a>
                 </div>
                 <div>
-                    <a href="/apply.html">Apply</a>
+                    <a onclick="topFunction()" href="/apply.html">Apply</a>
                 </div>
             </div>
         </div> <!-- end of the topmenu links -->
@@ -196,7 +207,7 @@ _______                               _____          _
                    <div>
                    <h3>General Information</h3>
                    <div class="row">
-                   <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Java Address</strong>: <br>Version: 1.16.4<br>Port: 25565</p>
+                   <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Java Address</strong>: <br>Version: 1.16.5<br>Port: 25565</p>
                    <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Bedrock Address</strong>: <br>Version: 1.16.200<br>Port: 19132</p>
                 </div>
                </div> 
@@ -273,7 +284,8 @@ _______                               _____          _
                                     </div>
                                 </div>
                             </div>
-                            <!--SniperXGreen-->
+
+                            <!--SniperXGreen
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <div class="card staffcard" id="mobilecard"
                                     style="width: 275px; margin: 0 auto; height: auto; margin-bottom: 20px;">
@@ -296,6 +308,7 @@ _______                               _____          _
                                     </div>
                                 </div>
                             </div>
+                            -->
 
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <div class="card staffcard" id="mobilecard"
@@ -308,6 +321,29 @@ _______                               _____          _
                                         <center>
                                             <h5 class="card-title" style="text-shadow: 3px 4px 5px #000; color: white;">
                                                 KakaJedze</h5>
+                                            <em>
+                                                <h6 class="card-subtitle mb-2">Moderator</h6>
+                                            </em>
+                                            <button type="button" class="btn modalbutton" data-toggle="modal"
+                                                data-target="#exampleModal5">
+                                                Biography
+                                            </button>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                <div class="card staffcard" id="mobilecard"
+                                    style="width: 275px; margin: 0 auto; height: auto; margin-bottom: 20px;">
+                                    <img class="card-img-top staffimage"
+                                        src="
+                                        https://crafatar.com/renders/body/4fe6a729-1404-4e5a-9426-0189aa562f51"
+                                        alt="Zindain">
+                                    <div class="card-body ">
+                                        <center>
+                                            <h5 class="card-title" style="text-shadow: 3px 4px 5px #000; color: white;">
+                                                Zindain</h5>
                                             <em>
                                                 <h6 class="card-subtitle mb-2">Moderator</h6>
                                             </em>
@@ -366,7 +402,7 @@ _______                               _____          _
                                 </div>
                             </div> 
 
-
+                            <!--
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
                                 <div class="card staffcard" id="mobilecard"
                                     style="width: 275px; margin: 0 auto; height: auto; margin-bottom: 20px;">
@@ -389,7 +425,7 @@ _______                               _____          _
                                     </div>
                                 </div>
                             </div>
-
+                            -->
                         </div>
                     </div>
                     

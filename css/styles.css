@@ -52,6 +52,7 @@
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: white;
+    margin:0;
 }
 
 .guidebutton {
@@ -606,3 +607,5 @@ pre {
 width: 100%;
 min-height: 540px;
 }
+
+
