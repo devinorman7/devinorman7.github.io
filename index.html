@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta charset="UTF-8">
@@ -21,9 +21,11 @@
 
     <link rel="icon" type="image/png" sizes="192X192" href="/images/cursivelogo3.png">
     <link rel="apple-touch-icon" type="image/png" sizes="192X192" href="/images/cursivelogo3.png">
-    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="/images/cursivelogo2.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+        href="/images/cursivelogo2.png">
 
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -39,12 +41,28 @@
     <link href="./css/nav.css" rel="stylesheet">
     <link href="./css/accordion.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
-    
+
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script defer src="https://unpkg.com/@swup/debug-plugin@1.0.3/dist/SwupDebugPlugin.min.js"></script>
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
     <script defer src="./js/script.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+    <!--Vue & Axios-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- API Script-->
+    <script defer src="./js/mcserverdata.js"></script>
 
     <title>FloCraft</title>
     <meta name="google-site-verification" content="bnoSkAsme7-G1S98FKeD7E4KMWAUDBbgS5vELjYTnvw" />
@@ -67,7 +85,7 @@
         <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
         <div class="sidenav">
             <!-- Links for side menu bar -->
-            <div class="transition-current" >
+            <div class="transition-current">
                 <a href="/index.html" onclick="navClose()" class="homelink">Home</a>
             </div>
             <div>
@@ -94,7 +112,7 @@
             <div>
                 <a href="/apply.html" onclick="navClose()">Apply</a>
             </div>
-            
+
         </div> <!-- end of the sidemenu links -->
 
         <script>
@@ -136,81 +154,135 @@
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
-        <div class="clicktocloseoverlay" onclick="navClose()">
-            <!--overlay to close popup -->
-        </div>
+
+        <!--Scroll to the top script-->
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+
+        <!--Conditional Spacing to overwrite Bootstrap padding in row class-->
+        <style>
+            .conditionalspace15px {
+                padding-left: 15px;
+                padding-right: 0px;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .conditionalspace15px {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+
+            
+        </style>
+
+        <!--overlay to close popup -->
+        <div class="clicktocloseoverlay" onclick="navClose()"></div>
+
         <!-- Topbar - desktop -->
         <div class="topnav">
             <!--Links for top menu bar-->
             <a href="/"><img src="/images/cursivelogo2.png" class="logo" alt="flocraft"></a>
             <div class="toplinks">
                 <div class="transition-current">
-                    <a href="/index.html">Home</a>
+                    <a onclick="topFunction()" href="/index.html">Home</a>
                 </div>
                 <div>
-                    <a href="/about.html">About</a>
+                    <a onclick="topFunction()" href="/about.html">About</a>
                 </div>
                 <div>
-                    <a href="/rules.html">Rules</a>
+                    <a onclick="topFunction()" href="/rules.html">Rules</a>
                 </div>
                 <div>
-                    <a href="/guide.html">Guide</a>
+                    <a onclick="topFunction()" href="/guide.html">Guide</a>
                 </div>
                 <div>
-                    <a href="https://discord.gg/HaJAMeU" target="_blank">Discord</a>
+                    <a onclick="topFunction()" href="https://discord.gg/HaJAMeU" target="_blank">Discord</a>
                 </div>
                 <div>
-                    <a href="/vote.html">Vote</a>
+                    <a onclick="topFunction()" href="/vote.html">Vote</a>
                 </div>
                 <div>
-                    <a href="/livemap.html">Live Map</a>
+                    <a onclick="topFunction()" href="/livemap.html">Live Map</a>
                 </div>
                 <div>
-                    <a href="/donate.html">Donate</a>
+                    <a onclick="topFunction()" href="/donate.html">Donate</a>
                 </div>
                 <div>
-                    <a href="/apply.html">Apply</a>
+                    <a onclick="topFunction()" href="/apply.html">Apply</a>
                 </div>
             </div>
         </div> <!-- end of the topmenu links -->
+
         <main>
-            <div class="transition-fade" style="margin-top: 6.6vh;">
+            <div id="app" class="transition-fade" style="margin-top: 6.6vh;">
 
                 <div id="logo-container"><img src="images/map4.jpg" alt="flocraft survival server"></div>
                 <div class="headercontent animated animatedFadeInUp fadeInUp">
-                   <div id="flocraft-text-container"><img src="images/floheader.png" alt="flocraft"></div>
+                    <div id="flocraft-text-container"><img src="images/floheader.png" alt="flocraft"></div>
                 </div>
                 <div class="serverinformationbg">
                     <div class="serverinformation">
-                    <h4 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Play now at</h4>
-                    <h1 style="text-shadow: 3px 4px 5px #000;">flocraft.online</h1>
-                    <center>
-                        <hr style="background-color: white;" id="smallhr">
-                    </center>
-                    <h5><span data-playercounter-ip="flocraft.online">0</span>/50 players currently playing!</h5>
+                        <h4
+                            style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                            Play now at</h4>
+                        <h1 style="text-shadow: 3px 4px 5px #000;">flocraft.online</h1>
+                        <center>
+                            <hr style="background-color: white;" id="smallhr">
+                        </center>
+                        <h5><span>{{online}}/{{max}} players currently playing!</span></h5>
                     </div>
                 </div>
-                
-                <div class="homebody">
-                    <div class="jumbotron">
+
+
+                <div class="homebody row">
+                    <div class="jumbotron col col-xs-12 col-sm-12 col-md-9 col-lg-10" style="background-color: white;;">
                         <h1 class="display-4">Welcome to FloCraft!</h1>
                         <p class="lead">FloCraft is a Survival Server with skills, land-claims, rankings, roles, special
                             events, and much more!</p>
-                        <hr style="background-color: black" ;>
+                        <hr style="background-color: black">
                         <p>We have taken the time to provide all of the instructional content you need to play and
                             succeed on FloCraft. Click below to see our guides!</p>
                         <p class="lead">
                             <a class="btn guidebutton btn-lg" href="/guide.html" role="button">Guides</a>
                         </p>
                     </div>
+
+                    <!-- Player List-->
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 conditionalspace15px">
+                        <li class="list-group-item playerinfo playerinfoheader">{{online}}/{{max}} Online</li>
+
+                        <ul v-for="(uuid, index) in uuidlist" class="list-group-item playerinfo">
+                            <li ><img :src="`https://crafatar.com/avatars/${uuid}`" class="onlineplayeravis"> {{index}} </li>
+                        </ul>
+
+                        <br>
+                        <!-- <form v-on:submit.prevent="refresh">
+                    <button class="btn btn-primary" id="buttoncenter" type="submit">Refresh List</button>
+                </form>-->
+                    </div>
                 </div>
+
                 <footer class="page-footer font-small">
                     <div class="text-center py-3 footer">
-                    <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin Orman</a></p>
+                        <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business"
+                                id="footerlink">Devin
+                                Orman</a></p>
                     </div>
-                </footer>   
+                </footer>
             </div>
         </main>
 </body>
+
+
+
 
 </html>

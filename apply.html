@@ -137,6 +137,17 @@
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
+        <script>
+            //Get the button:
+            mybutton = document.getElementById("myBtn");
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0; // For Safari
+              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            
+                    </script>
         <div class="clicktocloseoverlay" onclick="navClose()">
             <!--overlay to close popup -->
         </div>
@@ -155,31 +166,31 @@ _______                               _____          _
             <a href="/"><img src="/images/cursivelogo2.png" class="logo" alt="flocraft logo"></a>
             <div class="toplinks">
                 <div>
-                    <a href="/index.html">Home</a>
+                    <a onclick="topFunction()" href="/index.html">Home</a>
                 </div>
                 <div>
-                    <a href="/about.html">About</a>
+                    <a onclick="topFunction()" href="/about.html">About</a>
                 </div>
                 <div>
-                    <a href="/rules.html">Rules</a>
+                    <a onclick="topFunction()" href="/rules.html">Rules</a>
                 </div>
                 <div>
-                    <a href="/guide.html">Guide</a>
+                    <a onclick="topFunction()" href="/guide.html">Guide</a>
                 </div>
                 <div>
-                    <a href="https://discord.gg/HaJAMeU">Discord</a>
+                    <a onclick="topFunction()" href="https://discord.gg/HaJAMeU">Discord</a>
                 </div>
                 <div>
-                    <a href="/vote.html">Vote</a>
+                    <a onclick="topFunction()" href="/vote.html">Vote</a>
                 </div>
                 <div>
-                    <a href="/livemap.html">Live Map</a>
+                    <a onclick="topFunction()" href="/livemap.html">Live Map</a>
                 </div>
                 <div>
-                    <a href="/donate.html">Donate</a>
+                    <a onclick="topFunction()" href="/donate.html">Donate</a>
                 </div>
                 <div class="transition-current">
-                    <a href="/apply.html">Apply</a>
+                    <a onclick="topFunction" href="/apply.html">Apply</a>
                 </div>
             </div>
         </div> <!-- end of the topmenu links -->
