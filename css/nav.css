@@ -190,7 +190,7 @@ html.is-animating .sidenav a { /*swup animation when a link is clicked*/
 .topnav .logo { /*position the logo at the top of the sidenav*/
     position: absolute;
     display: block;
-    padding: 0.2vh 0px 0px 0px;
+    padding: .6vh 0px 0px 0px;
     left: 20px; 
     height: 5.8vh;
     filter: drop-shadow(0 0 10px var(--color5));
@@ -198,20 +198,19 @@ html.is-animating .sidenav a { /*swup animation when a link is clicked*/
 
 .toplinks { /*container with top links inside it*/
     position: relative;
-    left: 70px;
-    bottom: 3px;
-    height: 58px;
+    left: 65px;
+    bottom: .1vh;
 }
 
 .toplinks div { /*div for each link*/
     float: left;
-    margin: 10px 5px;
+    margin: 1vh;
     border-radius: 1px;
     border-bottom: 1px solid var(--color3);
 }
 
 .topnav a { /*style for top link text*/
-    padding: 0.2vh 6px 0.8vh 6px;
+    padding: 0vh 4px .3em 4px;
     text-decoration: none;
     font-size: 3vh;
     color: var(--color1);
@@ -222,11 +221,11 @@ html.is-animating .sidenav a { /*swup animation when a link is clicked*/
 
 .toplinks div:hover { /*change link style on hover*/
     outline: none !important;
-    border-bottom: 1px solid var(--color1);
+    border-bottom: .3vh solid var(--color1);
 }
 
 .toplinks .transition-current { /*highlight current page*/
-    border-bottom: 1px solid var(--color1);
+    border-bottom: .3vh solid var(--color1);
 }
 
 html.is-animating .toplinks .transition-current { /*swup animaton when link is clicked*/

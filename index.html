@@ -86,31 +86,31 @@
         <div class="sidenav">
             <!-- Links for side menu bar -->
             <div class="transition-current">
-                <a href="/index.html" onclick="navClose()" class="homelink">Home</a>
+                <a href="/index.html" onclick="navClose(); topFunction()" class="homelink">Home</a>
             </div>
             <div>
-                <a href="/about.html" onclick="navClose()">About</a>
+                <a href="/about.html" onclick="navClose(); topFunction()">About</a>
             </div>
             <div>
-                <a href="/rules.html" onclick="navClose()">Rules</a>
+                <a href="/rules.html" onclick="navClose(); topFunction()">Rules</a>
             </div>
             <div>
-                <a href="/guide.html" onclick="navClose()">Guide</a>
+                <a href="/guide.html" onclick="navClose(); topFunction()">Guide</a>
             </div>
             <div>
-                <a href="https://discord.gg/HaJAMeU" onclick="navClose()">Discord</a>
+                <a href="https://discord.gg/HaJAMeU" onclick="navClose(); topFunction()">Discord</a>
             </div>
             <div>
-                <a href="/vote.html" onclick="navClose()">Vote</a>
+                <a href="/vote.html" onclick="navClose(); topFunction()">Vote</a>
             </div>
             <div>
-                <a href="/livemap.html" onclick="navClose()">Live Map</a>
+                <a href="/livemap.html" onclick="navClose(); topFunction()">Live Map</a>
             </div>
             <div>
-                <a href="/donate.html" onclick="navClose()">Donate</a>
+                <a href="/donate.html" onclick="navClose(); topFunction()">Donate</a>
             </div>
             <div>
-                <a href="/apply.html" onclick="navClose()">Apply</a>
+                <a href="/apply.html" onclick="navClose(); topFunction()">Apply</a>
             </div>
 
         </div> <!-- end of the sidemenu links -->
@@ -225,20 +225,25 @@
         <main>
             <div id="app" class="transition-fade" style="margin-top: 6.6vh;">
 
-                <div id="logo-container"><img src="images/map4.jpg" alt="flocraft survival server"></div>
+                <div id="logo-container">
+                    <figure class="pic-1"></figure>
+                    <figure class="pic-2"></figure>
+                    <figure class="pic-3"></figure>
+                    <figure class="pic-4"></figure>
+                </div>
                 <div class="headercontent animated animatedFadeInUp fadeInUp">
                     <div id="flocraft-text-container"><img src="images/floheader.png" alt="flocraft"></div>
                 </div>
                 <div class="serverinformationbg">
-                    <div class="serverinformation">
+                    <div class="serverinformation" >
                         <h4
-                            style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                            style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 3vh;">
                             Play now at</h4>
-                        <h1 style="text-shadow: 3px 4px 5px #000;">flocraft.online</h1>
+                        <h1 style="text-shadow: 3px 4px 5px #000;font-size: 4vh;">flocraft.online</h1>
                         <center>
                             <hr style="background-color: white;" id="smallhr">
                         </center>
-                        <h5><span>{{online}}/{{max}} players currently playing!</span></h5>
+                        <h5 style="font-size: 2.5vh;"><span>{{online}}/{{max}} players currently playing!</span></h5>
                     </div>
                 </div>
 
