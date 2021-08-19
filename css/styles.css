@@ -162,13 +162,6 @@ slideShow {  0% {
     height: auto;
 }
 
-@media only screen and (max-width: 500px) {
-  #flocraft-text-container img {
-    min-width: 350px;
-    max-width: 350px;
-    height: auto;
-}
-}
 
 .headercontent {
     text-align: center;
