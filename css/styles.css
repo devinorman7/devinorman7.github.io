@@ -162,11 +162,11 @@ slideShow {  0% {
     height: auto;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   #flocraft-text-container img {
     width: 100%;
-    max-width: 80vw;
-    min-width: 80vw;;
+    max-width: 60vw;
+    min-width: 60vw;;
     height: auto;
 }
 }
