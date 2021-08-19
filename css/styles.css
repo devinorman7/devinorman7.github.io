@@ -157,7 +157,7 @@ slideShow {  0% {
 
 #flocraft-text-container img {
     width: 100%;
-    max-width: 30vw;
+    max-width: 25vw;
     min-width: 150px;
     height: auto;
 }
