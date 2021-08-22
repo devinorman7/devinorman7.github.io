@@ -270,9 +270,9 @@ slideShow {  0% {
 }
 
 .animated {
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-fill-mode: both;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 1.2s;
     -webkit-animation-fill-mode: both
 }
 

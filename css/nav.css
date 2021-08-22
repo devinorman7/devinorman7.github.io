@@ -17,6 +17,17 @@
 .transition-fade {/*makes the website body normally shown*/
     opacity: 1;
 }
+
+.transition-swipe {/*header swipe up*/
+    transform: translateY(0);
+    transition: 10000ms;
+}
+
+html.is-leaving .transition-swipe{
+    transform: translateY(100px);
+}
+
+
 html.is-animating .transition-fade {/*fade out page for transition*/
     opacity: 0;
     transform: translate3d(0px, -10px, 0px);
