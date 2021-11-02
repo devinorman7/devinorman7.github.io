@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="FloCraft - Minecraft Survival Server ">
-
+    
     <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
 
     <meta name="mobile-web-app-capable" content="yes">
@@ -37,21 +37,15 @@
     <link href="./css/nav.css" rel="stylesheet">
     <link href="./css/accordion.css" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
- 
+  
     <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
     <script defer src="https://unpkg.com/@swup/debug-plugin@1.0.3/dist/SwupDebugPlugin.min.js"></script>
     <script src="https://stadiasource.com/js/SwupScriptsPlugin.js"></script>
     <script defer src="./js/script.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js">
-    </script>
-
-    <title>Donate</title>
+    <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    
+    <title>Live Map</title>
     <meta name="google-site-verification" content="bnoSkAsme7-G1S98FKeD7E4KMWAUDBbgS5vELjYTnvw" />
-    <style>
-
-
-
-        </style>
 </head>
 
 <body>
@@ -89,13 +83,13 @@
             <div>
                 <a href="/vote.html" onclick="navClose(); topFunction()">Vote</a>
             </div>
-            <div>
+            <div >
                 <a href="/livemap.html" onclick="navClose(); topFunction()">Live Map</a>
             </div>
-            <div>
+            <div class="transition-current">
                 <a href="/store.html" onclick="navClose(); topFunction()">Store</a>
             </div>
-            <div class="transition-current">
+            <div>
                 <a href="/donate.html" onclick="navClose(); topFunction()">Donate</a>
             </div>
             <div>
@@ -130,19 +124,18 @@
             }
 
             function teamitemopen(n) {
-                document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
-                document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0]
-                    .innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
-                document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
+                    document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
+                    document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
 
-            }
+                }
 
             function teamitemclose() {
                 document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
                 document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
             }
         </script>
-        <script>
+         <script>
             //Get the button:
             mybutton = document.getElementById("myBtn");
             
@@ -185,16 +178,16 @@ _______                               _____          _
                 <div>
                     <a onclick="topFunction" href="https://discord.gg/HaJAMeU">Discord</a>
                 </div>
-                <div>
+                <div >
                     <a onclick="topFunction" href="/vote.html">Vote</a>
                 </div>
-                <div>
+                <div >
                     <a onclick="topFunction" href="/livemap.html">Live Map</a>
                 </div>
-                <div>
+                <div class="transition-current">
                     <a onclick="topFunction" href="/store.html">Store</a>
                 </div>
-                <div class="transition-current">
+                <div>
                     <a onclick="topFunction" href="/donate.html">Donate</a>
                 </div>
                 <div>
@@ -205,118 +198,15 @@ _______                               _____          _
         <main>
 
             <div class="transition-fade" style="margin-top: 6.6vh;">
-                <div class="contentpagefaq">
-                    <h1 class="display-4">Donate</h1>
-                    <hr style="background-color: var(--color3);">
-
-                    <p>Help keep the server growing by making a donation! Any amount is greatly appreciated.
-                        All donations are securely processed and handled externally. Thank you! </p>
-                        
-                    
-
-                    <div class="list-group">
-
-                        <form action="https://www.paypal.com/donate" method="post" target="_top">
-                            <input type="hidden" name="business" value="flocrafters@gmail.com" />
-                            <input type="hidden" name="item_name" value="FloCraft" />
-                            <input type="hidden" name="currency_code" value="USD" />
-                            
-                            <button type="image" border="0" name="submit"
-                                title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button"
-                                class="donatebutton"><img src="images/creditdebit.png" class="payicons" alt="credit card icon">PayPal or Card</button>
-
-                        </form>
-                        <a href="https://cash.app/$flocraft/0" target="_blank"
-                            class="list-group-item list-group-item-action"><img src="images/cashappicon.png" class="payicons" alt="cashapp icon">CashApp</a>
-                        <a href="https://venmo.com/flocraft" target="_blank"
-                            class="list-group-item list-group-item-action"><img src="images/venmoicon7.png" class="payicons" alt="venmo icon">Venmo</a>
-                    </div>
-                </div>      
-                <div class="contentpagefaq" style="margin-top: 20px;">
+               <iframe src="https://flocraft.tebex.io" class="livemap">
+                    <p>Your browser does not support iframes.</p>
+                  </iframe>                  
                 
-                <!--<center><p><strong>Complete the following steps to get your new rank:</strong></p></center>-->
-
-                <div class="accordion donateinstructions">  
-                    <!--        
-<ul>
-  <li>
-   
-    <input type="checkbox" checked>
-    <i></i>
-    <h2>For Card and PayPal Payments</h2>
-    <p> 
-                   
-        <span class="customlist">1</span> Submit a donation of $10 or more<br>
-        <span class="customlist">2</span> Send an email to <a href="mailto:flocrafters@gmail.com" id="footerlink">flocrafters@gmail.com</a> including:</p>
-       <p style="margin-left: 20px;">
-        
-        A screenshot of proof for your donation<br>
-        MC username<br>
-        Platform (Java or Bedrock)<br>
-        New Rank Name<br>
-        Rank color<br>
-    </p>
-  </li>
-  
-  <li>
-    <input type="checkbox" checked>
-    <i></i>
-    <h2>For CashApp and Venmo Payment</h2>
-    <p>
-        
-                
-        <span class="customlist">1</span> Enter a donation amount of $10 or more<br>
-            <span class="customlist">2</span> Before submitting, enter a payment note including:</p>
-           
-            <p style="margin-left: 20px;">
-            MC username<br>
-            Platform (Java or Bedrock)<br>
-            New Rank Name<br>
-            Rank color<br>
-        </p>
-        <p>
-            <span class="customlist">3</span> Submit
-    </p>
-   
-  </li>
-
-</ul>
-
-             -->   
 
                 
+
             </div>
-                
-                
-                <h2>Where the Money Goes</h2>
-                <h4 class="text-muted">Upload Speed</h4>
-                <h5>Cost: $100/month</h5>
-                <h5>Status: <span style="color:red"><b>Not Purchased</b></span></h5>
-                We want to improve our upload speed by upgrading our overall service plan. Upload speed helps to increase player capacity and reduce lag and timeouts.
-                <p></p>
-                
-                <h4 class="text-muted">Storage</h4>
-                <h5>Cost: $150</h5>
-                <h5>Status: <span style="color:green"><b>Purchased</b></span></h5>
-                We were capped out on server space, and with your guys' help we successfult increased our storage from 256GB to 1TB!
-                <p></p>
-                <h4 class="text-muted">RAM</h4>
-                <h5>Cost: $150</h5>
-                <h5>Status: <span style="color:green"><b>Purchased</b></span></h5>
-                Thanks to you guys, we successful upgraded our RAM from 16GB to 32GB, resulting in lag-reduction, improved TPS, and more actively loaded memory!
-                <p></p>
-            </div>
-
-
-            <footer class="page-footer font-small" style="">
-                <div class="text-center py-3 footer">
-                    <p>Copyright © FloCraft 2021 | Developed by <a href="https://devin.business" id="footerlink">Devin
-                            Orman</a></p>
-                </div>
-            </footer>
-
-    </div>
-    </main>
+        </main>
 </body>
 
 </html>

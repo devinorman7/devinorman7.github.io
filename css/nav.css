@@ -417,6 +417,8 @@ footer {
     flex-shrink: 0;
     color: var(--color1);
 }
+
+
 footer .copyright {
     position: absolute;
     right: 28px;
