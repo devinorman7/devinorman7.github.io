@@ -485,18 +485,18 @@ a.disabled{
       align-items: center;
       padding: 12px 0;
       box-sizing: border-box;
-      font-size: 40px;
+      font-size: 1.5em;
     }
     
     
     /* Element counter */
     .ruleul li::before {
       content: counters(index, ".", decimal-leading-zero);
-      font-size: 5rem;
+      font-size: 2rem;
       text-align: left;
       font-weight: bold;
       min-width: 50px;
-      padding-right: 50px;
+      margin-right: 10px;
       font-variant-numeric: tabular-nums;
       align-self: flex-start;
       background-image: linear-gradient(to bottom, var(--color2), var(--color3));
