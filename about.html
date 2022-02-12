@@ -44,7 +44,11 @@
     <script defer src="./js/script.js"></script>
     <script defer src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js">
     </script>
-
+ <!--Vue & Axios-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.js"></script>
+ <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <!-- API Script-->
+ <script defer src="./js/mcserverdata.js"></script>
     <title>About</title>
     <meta name="google-site-verification" content="bnoSkAsme7-G1S98FKeD7E4KMWAUDBbgS5vELjYTnvw" />
 </head>
@@ -205,7 +209,7 @@ _______                               _____          _
         </div> <!-- end of the topmenu links -->
       
         <main>
-            <div class="transition-fade" style="margin-top: 6.6vh;">
+            <div id="app" class="transition-fade" style="margin-top: 6.6vh;">
                 <div class="contentpage">
                     <h1 class="display-4">About</h1>
                     <hr style="background-color: var(--color3); ">
@@ -219,8 +223,8 @@ _______                               _____          _
                    <div>
                    <h3>General Information</h3>
                    <div class="row">
-                   <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Java</strong>: <br>IP: flocraft.online<br>Version: 1.17.1<br>Port: 25565</p>
-                   <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Bedrock</strong>: <br>IP: flocraft.online<br>Version: 1.17.1<br>Port: 19132</p>
+                   <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Java</strong>: <br>IP: flocraft.online<br>Version: {{version}}<br>Port: 25565</p>
+                   <p class="col col-xs-6 col-sm-6 col-md-6 col-lg-3"><strong>Bedrock</strong>: <br>IP: flocraft.online<br>Version: {{version}}<br>Port: 19132</p>
                 </div>
                </div> 
                <br>

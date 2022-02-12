@@ -277,8 +277,8 @@
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 conditionalspace15px">
                         <li class="list-group-item playerinfo playerinfoheader">{{online}}/{{max}} Online</li>
 
-                        <ul v-for="(uuid, index) in uuidlist" class="list-group-item playerinfo">
-                            <li ><img :src="`https://crafatar.com/avatars/${uuid}`" class="onlineplayeravis"> {{index}} </li>
+                        <ul v-for="(player, index) in players" class="list-group-item playerinfo">
+                            <li ><img :src="`https://mc-heads.net/avatar/${player}`" class="onlineplayeravis"> {{player}} </li>
                         </ul>
 
                         <br>
