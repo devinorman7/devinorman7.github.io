@@ -4,14 +4,11 @@
       online: '',
       max: '',
       players: [],
-      uuidlist: [],
-      version: ''
+      version: '', 
     },
 
     computed: {
-      age() {
-        return moment().diff(this.birthdate, 'years');
-      }
+
     },
     methods: {
       formatDate(d) {
@@ -30,18 +27,18 @@
       }
 
     },
-    created() {},
+    created() {
+      
+    },
 
     mounted() {
-      axios.get('https://api.minetools.eu/query/98.157.123.97/25555')
-        .then(function (response) {
-          const server = response.data;
-          mc.online = server.Players;
-          mc.max = server.MaxPlayers;
-          mc.players = server.Playerlist;
-          mc.plugins = server.Plugins;
-          mc.version = server.Version;
-          console.log(response.data)
-        })
+      axios.get('https://api.minetools.eu/query/flocraft.online/25577')
+          .then(function (response) {
+            const server = response.data;
+            mc.online = server.Players;
+            mc.max = server.MaxPlayers;
+            mc.players = server.Playerlist;
+            mc.version = server.Version;
+          })    
     }
   });
