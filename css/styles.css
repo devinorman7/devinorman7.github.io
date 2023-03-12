@@ -763,4 +763,12 @@ width: 100%;
 min-height: 540px;
 }
 
+#votepageheight {
+height: 84vh;
+}
 
+@media only screen and (max-height: 750px) {
+  #votepageheight  {
+    height: 100%;
+   }
+ }
